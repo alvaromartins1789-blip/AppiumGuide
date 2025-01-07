@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-01-07T17:03:23 IST" name="Default suite" finished-at="2025-01-07T17:04:21 IST" duration-ms="57132">
+    <groups>
+    </groups>
+    <test started-at="2025-01-07T17:03:23 IST" name="Default test" finished-at="2025-01-07T17:04:21 IST" duration-ms="57132">
+      <class name="demo.MultipleScrollDemo">
+        <test-method is-config="true" signature="setup()[pri:0, instance:demo.MultipleScrollDemo@194fad1]" started-at="2025-01-07T17:03:23 IST" name="setup" finished-at="2025-01-07T17:03:32 IST" duration-ms="8025" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="test()[pri:0, instance:demo.MultipleScrollDemo@194fad1]" started-at="2025-01-07T17:03:32 IST" name="test" finished-at="2025-01-07T17:04:21 IST" duration-ms="49053" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:demo.MultipleScrollDemo@194fad1]" started-at="2025-01-07T17:04:21 IST" name="teardown" finished-at="2025-01-07T17:04:21 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- demo.MultipleScrollDemo -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

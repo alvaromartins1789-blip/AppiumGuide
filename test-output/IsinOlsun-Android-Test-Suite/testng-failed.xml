@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [IsinOlsun-Android-Test-Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="tests" name="Pixel8Pro(failed)">
+    <parameter name="platformVersion" value="13"/>
+    <parameter name="udid" value="Pixel8Pro"/>
+    <classes>
+      <class name="demo1.AppManagement">
+        <methods>
+          <include name="stepup1"/>
+          <include name="teardown1"/>
+          <include name="sessionidsample"/>
+        </methods>
+      </class> <!-- demo1.AppManagement -->
+    </classes>
+  </test> <!-- Pixel8Pro(failed) -->
+</suite> <!-- Failed suite [IsinOlsun-Android-Test-Suite] -->
