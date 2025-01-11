@@ -16,7 +16,7 @@ import java.time.Duration;
 import java.util.Base64;
 
 /**
- * Script Details - 
+ * Script Details - Appium Concepts - How to Capture a "Screen Shot" by using in-built - "getScreenshotAs" method
  * 
  * appium-java-client version: 9.3.0
  * 

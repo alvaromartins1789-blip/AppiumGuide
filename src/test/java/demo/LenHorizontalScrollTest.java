@@ -9,7 +9,13 @@ import io.appium.java_client.android.options.UiAutomator2Options;
 import java.net.*;
 import java.time.Duration;
 
-
+/**
+ * Script Details - "Scroll Gestures”-UiScrollable-How to perform "Very Lengthy Horizontal Scroll" using UiScrollable
+ * 
+ * appium-java-client version: 9.3.0
+ * 
+ * @author 'Ramesh Kodumuru' for AppiumGuide [appiumguide@gmail.com]
+ */
 
 public class LenHorizontalScrollTest {
 	

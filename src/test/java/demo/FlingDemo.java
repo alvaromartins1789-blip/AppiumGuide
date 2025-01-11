@@ -14,7 +14,7 @@ import java.net.*;
 import java.time.Duration;
 
 /**
- * Script Details - 
+ * Script Details - Appium Gestures-(Part-1)-How to Perform ‘FlingGesture’ based on element-Using W3C MobileGestures
  * 
  * appium-java-client version: 9.3.0
  * 

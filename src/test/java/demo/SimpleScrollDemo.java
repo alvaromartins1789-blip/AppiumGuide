@@ -14,7 +14,7 @@ import java.net.*;
 import java.time.Duration;
 
 /**
- * Script Details - 
+ * Script Details - (part-1)How to Perform ScrollGesture Using W3C MobileGestures-Simple Scrolling:Based on elementId
  * 
  * appium-java-client version: 9.3.0
  * 

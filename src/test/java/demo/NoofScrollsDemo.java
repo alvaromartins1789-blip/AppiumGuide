@@ -12,6 +12,14 @@ import io.appium.java_client.android.options.UiAutomator2Options;
 import java.net.*;
 import java.time.Duration;
 
+/**
+ * Script Details - 6:"Scroll Gestures”-‘UiScrollable’-How to perform/define "No of Scrolls"by using UiScrollable Class
+ * 
+ * appium-java-client version: 9.3.0
+ * 
+ * @author 'Ramesh Kodumuru' for AppiumGuide [appiumguide@gmail.com]
+ */
+
 public class NoofScrollsDemo {
 	
 	private AndroidDriver driver;

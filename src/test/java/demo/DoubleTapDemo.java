@@ -18,7 +18,7 @@ import java.time.Duration;
 import java.util.Collections;
 
 /**
- * Script Details - 
+ * Script Details - Appium Gestures|How to Perform ‘Double Tap’ Gesture on a element & mobile screen-Using W3CActionsAPI
  * 
  * appium-java-client version: 9.3.0
  * 

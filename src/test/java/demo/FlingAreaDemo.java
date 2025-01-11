@@ -14,7 +14,7 @@ import java.net.*;
 import java.time.Duration;
 
 /**
- * Script Details - 
+ * Script Details - #7 | (Part-2)-Perform ‘FlingGesture’ based on Area(fling bounding area & direction - left/right
  * 
  * appium-java-client version: 9.3.0
  * 

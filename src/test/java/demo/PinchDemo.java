@@ -19,7 +19,7 @@ import java.net.*;
 import java.time.Duration;
 
 /**
- * Script Details - 
+ * Script Details - Appium Gestures - ‘Pinch Open & Pinch Close’ Using W3C mobile Gestures
  * 
  * appium-java-client version: 9.3.0
  * 

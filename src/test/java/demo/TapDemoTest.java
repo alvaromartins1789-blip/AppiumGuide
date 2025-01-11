@@ -18,7 +18,7 @@ import java.time.Duration;
 import java.util.Collections;
 
 /**
- * Script Details - 
+ * Script Details - Appium Gestures | How to Perform ‘Tap’ Gesture on a element & mobile screen-Using W3C Actions API
  * 
  * appium-java-client version: 9.3.0
  * 

@@ -17,7 +17,7 @@ import java.net.*;
 import java.time.Duration;
 
 /**
- * Script Details - 
+ * Script Details - How to Perform "Scroll" Gesture - Scrolling : Based on Percent(0.25,0.50,0.75,1.0)
  * 
  * appium-java-client version: 9.3.0
  * 

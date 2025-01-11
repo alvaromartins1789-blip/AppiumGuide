@@ -11,7 +11,7 @@ import java.net.*;
 import java.time.Duration;
 
 /**
- * Script Details - 
+ * Script Details - "Scroll Gestures” -‘UiScrollable’ | How to perform "Scroll to End" by using 'UiScrollable' Class
  * 
  * appium-java-client version: 9.3.0
  * 

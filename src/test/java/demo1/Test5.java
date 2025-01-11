@@ -11,6 +11,15 @@ import org.testng.annotations.Test;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
+
+/**
+ * Script Details - 
+ * 
+ * appium-java-client version: 9.3.0
+ * 
+ * @author 'Ramesh Kodumuru' for AppiumGuide [appiumguide@gmail.com]
+ */
+
 public class Test5 {
 	
 	private AndroidDriver driver;
@@ -44,8 +53,8 @@ public class Test5 {
 	@AfterTest
 	public void teardown1() {
 		if(driver!=null) {
-			//driver.quit();
-			System.out.println("Test Completed");
+			driver.quit();
+			System.out.println("Test Execution Completed");
 		}
 	}
 	

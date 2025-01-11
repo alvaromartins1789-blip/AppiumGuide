@@ -16,7 +16,7 @@ import java.net.*;
 import java.time.Duration;
 
 /**
- * Script Details - 
+ * Script Details - (Part-4)-Perform ‘FlingGesture’ based on element & direction - "up"
  * 
  * appium-java-client version: 9.3.0
  * 

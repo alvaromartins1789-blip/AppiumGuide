@@ -12,7 +12,7 @@ import java.time.Duration;
 import java.util.Scanner;
 
 /**
- * Script Details - 
+ * Script Details - Appium Concepts | How to check & update “Battery Level” & “Charging State” Programmatically
  * 
  * appium-java-client version: 9.3.0
  * 

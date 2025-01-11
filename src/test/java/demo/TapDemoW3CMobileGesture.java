@@ -16,7 +16,7 @@ import java.time.Duration;
 import java.util.HashMap;
 
 /**
- * Script Details - 
+ * Script Details - Appium-W3C mobile Gestures | How to Perform ‘Tap’ Gesture Using W3C Mobile Gestures
  * 
  * appium-java-client version: 9.3.0
  * 

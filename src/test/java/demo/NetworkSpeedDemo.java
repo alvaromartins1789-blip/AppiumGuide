@@ -11,7 +11,7 @@ import java.net.*;
 import java.time.Duration;
 
 /**
- * Script Details - 
+ * Script Details - Appium Concepts | How to Simulate “NetworkSpeed” on Android Emulators with Appium
  * 
  * appium-java-client version: 9.3.0
  * 

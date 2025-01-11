@@ -10,7 +10,7 @@ import java.net.*;
 import java.time.Duration;
 
 /**
- * Script Details - 
+ * Script Details - Appium Concepts : Appium Mobile Automation - Open Notifications - Appium2.0
  * 
  * appium-java-client version: 9.3.0
  * 

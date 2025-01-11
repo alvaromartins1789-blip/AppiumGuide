@@ -10,7 +10,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 
 /**
- * Script Details - 
+ * Script Details - Appium Concepts : Complete Details on ‘Appium App Management’ Methods
  * 
  * appium-java-client version: 9.3.0
  * 

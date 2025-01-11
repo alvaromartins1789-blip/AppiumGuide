@@ -12,7 +12,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 
 /**
- * Script Details - 
+ * Script Details - Appium Concepts : How to Switch(Interact) between 3 Apps(Native/WebBrowser)-MobileAutomation
  * 
  * appium-java-client version: 9.3.0
  * 

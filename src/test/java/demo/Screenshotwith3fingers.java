@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Script Details - 
+ * Script Details - Appium Gestures | How to take ‘Screenshot’ with “3 Fingers” at runtime using Appium(W3C Actions api)
  * 
  * appium-java-client version: 9.3.0
  * 

@@ -15,7 +15,7 @@ import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.appmanagement.ApplicationState;
 
 /**
- * Script Details - 
+ * Script Details - Appium Concepts:How to find/query ‘App State’ during runtime(Complete Details) -.queryAppState()
  * 
  * appium-java-client version: 9.3.0
  * 

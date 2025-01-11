@@ -5,12 +5,18 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.nativekey.AndroidKey;
-import io.appium.java_client.android.nativekey.KeyEvent;
 import io.appium.java_client.android.options.UiAutomator2Options;
 
 import java.net.*;
 import java.time.Duration;
+
+/**
+* Script Details - Parallel Testing using Separate Appium Instances for Separate Devices
+ * i.e.(Running multiple Appium servers & sending one session to each server)
+ * appium-java-client version: 9.3.0
+ * 
+ * @author 'Ramesh Kodumuru' for AppiumGuide [appiumguide@gmail.com]
+ */
 
 public class Test2 {
 	
@@ -53,7 +59,8 @@ public class Test2 {
 	public void teardown2() {
 		
 		if(driver!=null) {
-			//driver.quit();
+			driver.quit();
+			System.out.println("Test Execution Completed");
 		}
 		
 	}

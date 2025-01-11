@@ -18,7 +18,7 @@ import java.io.IOException;
 import java.net.*;
 
 /**
- * Script Details - 
+ * Script Details - Appium Concepts : How To Automate Screen Recording in Appium(With in-detailed Explanation)
  * 
  * appium-java-client version: 9.3.0
  * 

@@ -8,7 +8,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
 /**
- * Script Details - 
+ * Script Details - Appium Concepts : Simulating SMS Messages - Mobile Automation - Appium2.0
  * 
  * appium-java-client version: 9.3.0
  * 

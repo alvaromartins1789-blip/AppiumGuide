@@ -44,8 +44,8 @@ private AndroidDriver driver;
 	@AfterTest
 	public void teardown() {
 		if(driver!=null) {
-			//driver.quit();
-			System.out.println("Test Completed");
+			driver.quit();
+			System.out.println("Test Execution Completed");
 		}
 	}
 	

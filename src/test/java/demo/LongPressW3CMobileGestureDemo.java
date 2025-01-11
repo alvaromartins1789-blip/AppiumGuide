@@ -16,7 +16,7 @@ import java.net.*;
 import java.time.Duration;
 
 /**
- * Script Details - 
+ * Script Details - Appium-W3C mobile Gestures | How to Perform ‘LongPress’ Gesture Using W3C Mobile Gestures
  * 
  * appium-java-client version: 9.3.0
  * 

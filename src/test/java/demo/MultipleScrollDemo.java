@@ -14,7 +14,7 @@ import java.net.*;
 import java.time.Duration;
 
 /**
- * Script Details - 
+ * Script Details - How to Perform "Scroll"Gesture-Multiple Scrolling:Based on elementId & Direction–Up/Down
  * 
  * appium-java-client version: 9.3.0
  * 

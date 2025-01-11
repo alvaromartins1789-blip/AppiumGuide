@@ -14,7 +14,7 @@ import io.appium.java_client.android.options.UiAutomator2Options;
 
 
 /**
- * Script Details - 
+ * Script Details - Appium Concepts : How to Fetch/Use 'SessionID' with 'Appium Inspector'-Mobile Automation-Appium2
  * 
  * appium-java-client version: 9.3.0
  * 

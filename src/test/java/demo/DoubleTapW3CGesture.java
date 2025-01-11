@@ -17,7 +17,7 @@ import java.time.Duration;
 import java.util.HashMap;
 
 /**
- * Script Details - 
+ * Script Details - Appium Gestures - ‘DoubleTap/DoubleClick’ Using W3C mobile Gestures
  * 
  * appium-java-client version: 9.3.0
  * 
