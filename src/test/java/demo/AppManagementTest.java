@@ -3,16 +3,19 @@ package demo;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
-
-import org.openqa.selenium.remote.SessionId;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
-import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
-import io.appium.java_client.appmanagement.BaseRemoveApplicationOptions;
+
+/**
+ * Script Details - 
+ * 
+ * appium-java-client version: 9.3.0
+ * 
+ * @author 'Ramesh Kodumuru' for AppiumGuide [appiumguide@gmail.com]
+ */
 
 public class AppManagementTest {
 	
@@ -33,8 +36,8 @@ public class AppManagementTest {
 	@AfterTest
 	public void teardown() {
 		if(driver!=null) {
-			//driver.quit();
-			System.out.println("Test Completed");
+			driver.quit();
+			System.out.println("Test Execution Completed");
 		}
 	}
 	
@@ -64,13 +67,6 @@ public class AppManagementTest {
 		Thread.sleep(15000);
 		driver.removeApp(app_package);
 		System.out.println("wdio app is uninstalled");
-		
-		
-		
-		
-		
-		
-		
 		
 	}
 	

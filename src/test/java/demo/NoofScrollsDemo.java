@@ -9,7 +9,6 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
 import io.appium.java_client.android.options.UiAutomator2Options;
-
 import java.net.*;
 import java.time.Duration;
 
@@ -57,7 +56,9 @@ public class NoofScrollsDemo {
 	public void teardown() {
 		
 		if(driver!=null) {
-			//driver.quit();
+			driver.quit();
+			System.out.println("Test Execution Completed");
+
 		}
 		
 	}

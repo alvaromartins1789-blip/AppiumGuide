@@ -3,6 +3,7 @@ package com.appiumguide.demo1;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.DeviceRotation;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
@@ -35,6 +36,7 @@ import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.screenrecording.ScreenRecordingUploadOptions;
+import io.appium.java_client.serverevents.CommandEvent;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
@@ -48,6 +50,7 @@ import java.util.Arrays;
 import java.util.Base64;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
@@ -70,8 +73,8 @@ public class Test125 {
 		cap.setPlatformName("android");
 		cap.setAutomationName("uiautomator2");
 		cap.setDeviceName("Pixel8Pro");
-		
-					
+		cap.noReset();	
+							
 		driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), cap);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
@@ -80,50 +83,33 @@ public class Test125 {
 	@Test
 	public void test() throws InterruptedException {
 	
-		//WebElement element=driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().className(\"android.view.ViewGroup\").instance(76)"));
-		element=driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().className(\"android.view.ViewGroup\").instance(69)"));
+		Capabilities s=driver.getCapabilities();
+		System.out.println(s);
+		System.out.println(s.is("noReset"));
+		Object s2=s.getCapability("appium:deviceScreenDensity");
+		System.out.println(s2);
+		URL s1=driver.getRemoteAddress();
+		System.out.println(s1);
+				
+		String time=driver.getDeviceTime();
+		System.out.println(time);
+		Long density=driver.getDisplayDensity();
+		System.out.println(density);
 		
-		speedvalue=(int)(500*2.625);
+		String time1=driver.getDeviceTime("YY-MM-DD");
+		System.out.println(time1);
+		time1=driver.getDeviceTime("DD-MM-YY");
+		System.out.println(time1);
+		time1=driver.getDeviceTime("DD-MM");
+		System.out.println(time1);
+		time1=driver.getDeviceTime("YYYY");
+		System.out.println(time1);
 		
-		scroll=(boolean)((JavascriptExecutor) driver).executeScript("mobile: scrollGesture", ImmutableMap.of(
-				"elementId",((RemoteWebElement)element).getId(),
-				"direction","down",
-			    "percent",1.0,
-			    "speed",speedvalue
-			    
-			));
+				
+		//driver.configuratorSetScrollAcknowledgmentTimeout(null)
 		
-		Thread.sleep(3000);
 		
-		scroll=(boolean)((JavascriptExecutor) driver).executeScript("mobile: scrollGesture", ImmutableMap.of(
-				"elementId",((RemoteWebElement)element).getId(),
-				"direction","up",
-			    "percent",1.0,
-			    "speed",speedvalue
-			    
-			));
 		
-		element=driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().className(\"android.view.ViewGroup\").instance(24)"));
-		
-		speedvalue=(int)(500*2.625);
-		
-		scroll=(boolean)((JavascriptExecutor) driver).executeScript("mobile: scrollGesture", ImmutableMap.of(
-				"elementId",((RemoteWebElement)element).getId(),
-				"direction","down",
-			    "percent",1.0,
-			    "speed",speedvalue
-			    
-			));
-		
-		Thread.sleep(3000);
-		
-		scroll=(boolean)((JavascriptExecutor) driver).executeScript("mobile: scrollGesture", ImmutableMap.of(
-				"elementId",((RemoteWebElement)element).getId(),
-				"direction","up",
-			    "percent",1.0,
-			    "speed",speedvalue
-			    
-			));
 		
 		
 	}

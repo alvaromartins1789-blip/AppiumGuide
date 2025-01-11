@@ -48,6 +48,8 @@ import java.util.Arrays;
 import java.util.Base64;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
@@ -74,8 +76,32 @@ public class Sample {
 	
 	@Test
 	public void test() throws InterruptedException {
+		
+		//adb shell settings put global window_animation_scale 0
+		//adb shell settings put global transition_animation_scale 0
+		//adb shell settings put global animator_duration_scale 0
+
 				
-				
+		Map<String, Object> window_animation_scale = ImmutableMap.of(
+			    "command", "settings put global window_animation_scale",
+			    "args", "1"
+			    		
+			);
+			driver.executeScript("mobile: shell", window_animation_scale);
+			//
+		HashMap<Object,String> transition_animation_scale=new HashMap<>();
+		transition_animation_scale.put("command","settings put global transition_animation_scale");
+		transition_animation_scale.put("args","1");
+			
+		
+			driver.executeScript("mobile: shell", transition_animation_scale);
+		//
+		
+			driver.executeScript("mobile: shell",ImmutableMap.of(
+					"command", "settings put global animator_duration_scale",
+				    "args", "1"
+				    ));
+		
 	}
 			
 		

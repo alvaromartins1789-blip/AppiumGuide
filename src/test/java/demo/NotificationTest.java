@@ -9,6 +9,14 @@ import io.appium.java_client.android.options.UiAutomator2Options;
 import java.net.*;
 import java.time.Duration;
 
+/**
+ * Script Details - 
+ * 
+ * appium-java-client version: 9.3.0
+ * 
+ * @author 'Ramesh Kodumuru' for AppiumGuide [appiumguide@gmail.com]
+ */
+
 public class NotificationTest {
 	
 	private AndroidDriver driver;
@@ -29,8 +37,9 @@ public class NotificationTest {
 	@AfterTest
 	public void teardown() {
 		if(driver!=null) {
-			//driver.quit();
-			System.out.println("Test Completed");
+			driver.quit();
+			System.out.println("Test Execution Completed");
+
 		}
 	}
 	

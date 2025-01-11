@@ -17,6 +17,14 @@ import java.io.File;
 import java.io.IOException;
 import java.net.*;
 
+/**
+ * Script Details - 
+ * 
+ * appium-java-client version: 9.3.0
+ * 
+ * @author 'Ramesh Kodumuru' for AppiumGuide [appiumguide@gmail.com]
+ */
+
 public class ScreenRecordingTest {
 	
 	private AndroidDriver driver;
@@ -125,6 +133,7 @@ public class ScreenRecordingTest {
 		if(driver!=null) {
 			driver.terminateApp(app_package);
 			driver.quit();
+			System.out.println("Test Execution Completed");
 		}
 		
 	}

@@ -1,20 +1,20 @@
 package demo;
 
-//This sample code supports Appium Java client >=9
-//https://github.com/appium/java-client
-import io.appium.java_client.remote.options.BaseOptions;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
-
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.time.Duration;
-import java.util.Arrays;
-
-import org.openqa.selenium.*;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
+/**
+ * Script Details - 
+ * 
+ * appium-java-client version: 9.3.0
+ * 
+ * @author 'Ramesh Kodumuru' for AppiumGuide [appiumguide@gmail.com]
+ */
 
 public class Appiuminspectorsessiontest {
 
@@ -47,7 +47,8 @@ public void sampleTest() {
 
 @AfterTest
 public void tearDown() {
- //driver.quit();
+	driver.quit();
+	System.out.println("Test Execution Completed");
 }
 }
 

@@ -6,20 +6,24 @@ import org.testng.annotations.Test;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import java.time.Duration;
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.options.UiAutomator2Options;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.interactions.Pause;
 import org.openqa.selenium.interactions.PointerInput;
 import org.openqa.selenium.interactions.Sequence;
 
-import java.lang.classfile.Opcode.Kind;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+
+/**
+ * Script Details - 
+ * 
+ * appium-java-client version: 9.3.0
+ * 
+ * @author 'Ramesh Kodumuru' for AppiumGuide [appiumguide@gmail.com]
+ */
 
 public class Screenshotwith3fingers {
 	
@@ -103,11 +107,7 @@ public class Screenshotwith3fingers {
 		list_of_actions.add(indexfinger_seq);
 		list_of_actions.add(ringfinger_seq);
 		
-		((RemoteWebDriver)driver).perform(list_of_actions);
-		
-		
-		
-		
+		((RemoteWebDriver)driver).perform(list_of_actions);	
 		
 		
 	}
@@ -117,7 +117,8 @@ public class Screenshotwith3fingers {
 	public void teardown() {
 		
 		if(driver!=null) {
-			//driver.quit();
+			driver.quit();
+			System.out.println("Test Execution Completed");
 		}
 		
 	}

@@ -4,15 +4,21 @@ package demo;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
-
 import org.openqa.selenium.remote.SessionId;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
+
+/**
+ * Script Details - 
+ * 
+ * appium-java-client version: 9.3.0
+ * 
+ * @author 'Ramesh Kodumuru' for AppiumGuide [appiumguide@gmail.com]
+ */
 
 public class ActiveSessionTest {
 	
@@ -40,7 +46,7 @@ public class ActiveSessionTest {
 	@AfterTest
 	public void teardown() {
 		if(driver!=null) {
-			//driver.quit();
+			driver.quit();
 			System.out.println("Test Completed");
 		}
 	}
@@ -54,8 +60,7 @@ public class ActiveSessionTest {
 		driver.findElement(AppiumBy.xpath("//android.widget.LinearLayout[@resource-id=\"com.fastaguser:id/nhaionlinenew\"]/android.widget.LinearLayout/android.widget.ImageView")).click();
 		Thread.sleep(5000);
 		driver.findElement(AppiumBy.xpath("//android.widget.TextView[@resource-id=\"com.fastaguser:id/branch_company_name\" and @text=\"Amazon\"]")).click();
-		
-		
+				
 	}
 	
 

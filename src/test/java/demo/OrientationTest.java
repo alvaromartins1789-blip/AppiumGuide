@@ -12,6 +12,14 @@ import org.testng.annotations.Test;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 
+/**
+ * Script Details - 
+ * 
+ * appium-java-client version: 9.3.0
+ * 
+ * @author 'Ramesh Kodumuru' for AppiumGuide [appiumguide@gmail.com]
+ */
+
 public class OrientationTest {
 	
 	private AndroidDriver driver;
@@ -34,7 +42,7 @@ public class OrientationTest {
 	public void teardown() {
 		if(driver!=null) {
 			driver.quit();
-			System.out.println("Test Completed");
+			System.out.println("Test Execution Completed");
 		}
 	}
 	@Test

@@ -4,10 +4,17 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.GsmCallActions;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import java.net.*;
-
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+/**
+ * Script Details - 
+ * 
+ * appium-java-client version: 9.3.0
+ * 
+ * @author 'Ramesh Kodumuru' for AppiumGuide [appiumguide@gmail.com]
+ */
 
 public class PhoneCallTest {
 	
@@ -33,7 +40,7 @@ public class PhoneCallTest {
 	public void teardown() {
 		if(driver!=null) {
 			driver.quit();
-			System.out.println("Test Completed");
+			System.out.println("Test Execution Completed");
 		}
 	}
 	
@@ -84,9 +91,4 @@ public class PhoneCallTest {
 		driver.makeGsmCall(phoneno3, GsmCallActions.CANCEL);
 		System.out.println(phoneno3 +" - "+"call cancelled");
 	}
-	
-	
-	
-	
-
 }

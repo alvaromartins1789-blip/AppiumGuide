@@ -5,11 +5,9 @@ import org.openqa.selenium.OutputType;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
-
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -17,6 +15,13 @@ import java.net.*;
 import java.time.Duration;
 import java.util.Base64;
 
+/**
+ * Script Details - 
+ * 
+ * appium-java-client version: 9.3.0
+ * 
+ * @author 'Ramesh Kodumuru' for AppiumGuide [appiumguide@gmail.com]
+ */
 
 public class TakesScreenShotDemo {
 	
@@ -64,10 +69,7 @@ public class TakesScreenShotDemo {
 		String scrFile1=driver.getScreenshotAs(OutputType.BASE64);
 		FileOutputStream fos=new FileOutputStream("outputtype_base64"+".png");
 		byteArray=Base64.getDecoder().decode(scrFile1);
-		fos.write(byteArray);
-		
-		
-		
+		fos.write(byteArray);		
 		
 	}
 			
@@ -75,7 +77,9 @@ public class TakesScreenShotDemo {
 	public void teardown() {
 		
 		if(driver!=null) {
-			//driver.quit();
+			driver.quit();
+			System.out.println("Test Execution Completed");
+
 		}
 		
 	}

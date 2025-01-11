@@ -5,12 +5,11 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.nativekey.AndroidKey;
-import io.appium.java_client.android.nativekey.KeyEvent;
 import io.appium.java_client.android.options.UiAutomator2Options;
-
 import java.net.*;
 import java.time.Duration;
+
+
 
 public class LenHorizontalScrollTest {
 	
@@ -58,11 +57,7 @@ public class LenHorizontalScrollTest {
 		         ".scrollIntoView(new UiSelector().text(\"TAB 1\"))"));
 		Thread.sleep(5000);
 		
-		driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().text(\"TAB 1\")")).click();
-		
-		
-		
-		
+		driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().text(\"TAB 1\")")).click();		
 		
 	}
 	
@@ -72,7 +67,8 @@ public class LenHorizontalScrollTest {
 	public void teardown() {
 		
 		if(driver!=null) {
-			//driver.quit();
+			driver.quit();
+			System.out.println("Test Execution Completed");
 		}
 		
 	}

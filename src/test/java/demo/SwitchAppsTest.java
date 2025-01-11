@@ -3,16 +3,21 @@ package demo;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
-
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
 import com.google.common.collect.ImmutableMap;
-
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
+
+/**
+ * Script Details - 
+ * 
+ * appium-java-client version: 9.3.0
+ * 
+ * @author 'Ramesh Kodumuru' for AppiumGuide [appiumguide@gmail.com]
+ */
 
 public class SwitchAppsTest {
 	
@@ -40,7 +45,8 @@ public class SwitchAppsTest {
 	public void teardown() {
 		if(driver!=null) {
 			driver.quit();
-			System.out.println("Test Completed");
+			System.out.println("Test Execution Completed");
+
 		}
 	}
 	
@@ -71,13 +77,7 @@ public class SwitchAppsTest {
 		Thread.sleep(5000);
 		driver.executeScript("mobile:startActivity", ImmutableMap.of("intent",chromeappPackage+"/"+chromeappActivity));
 		Thread.sleep(5000);
-		driver.executeScript("mobile:startActivity", ImmutableMap.of("intent",AUTappPackage+"/"+AUTappActivity));
-		
-		
-		
-		
-		
-		
+		driver.executeScript("mobile:startActivity", ImmutableMap.of("intent",AUTappPackage+"/"+AUTappActivity));		
 		
 	}
 

@@ -5,12 +5,17 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.nativekey.AndroidKey;
-import io.appium.java_client.android.nativekey.KeyEvent;
 import io.appium.java_client.android.options.UiAutomator2Options;
-
 import java.net.*;
 import java.time.Duration;
+
+/**
+ * Script Details - 
+ * 
+ * appium-java-client version: 9.3.0
+ * 
+ * @author 'Ramesh Kodumuru' for AppiumGuide [appiumguide@gmail.com]
+ */
 
 public class HorizontalScrollDemo {
 	
@@ -45,17 +50,9 @@ public class HorizontalScrollDemo {
 		
 		driver.findElement(AppiumBy.androidUIAutomator(
 		        "new UiScrollable(new UiSelector().scrollable(true)).setAsHorizontalList()" +
-		         ".scrollIntoView(new UiSelector().text(\"TAB 9\"))"));
+		         ".scrollIntoView(new UiSelector().text(\"TAB 9\"))"));		
 		
-		
-		
-		
-		driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().text(\"TAB 9\")")).click();
-		
-		
-		
-
-		
+		driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().text(\"TAB 9\")")).click();		
 		
 	}
 			
@@ -64,7 +61,8 @@ public class HorizontalScrollDemo {
 	public void teardown() {
 		
 		if(driver!=null) {
-			//driver.quit();
+			driver.quit();
+			System.out.println("Test Execution Completed");
 		}
 		
 	}

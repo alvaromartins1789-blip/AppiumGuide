@@ -6,13 +6,20 @@ import org.openqa.selenium.remote.RemoteWebElement;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import java.net.*;
 import java.time.Duration;
 import java.util.HashMap;
+
+/**
+ * Script Details - 
+ * 
+ * appium-java-client version: 9.3.0
+ * 
+ * @author 'Ramesh Kodumuru' for AppiumGuide [appiumguide@gmail.com]
+ */
 
 public class MobileScrollDemo {
 	
@@ -88,7 +95,7 @@ public class MobileScrollDemo {
 		
 		if(driver!=null) {
 			driver.quit();
-			System.out.println("Test Completed");
+			System.out.println("Test Execution Completed");
 		}
 		
 	}

@@ -4,17 +4,23 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
 
-import org.openqa.selenium.remote.SessionId;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.google.common.collect.ImmutableMap;
 
-import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.appmanagement.ApplicationState;
+
+/**
+ * Script Details - 
+ * 
+ * appium-java-client version: 9.3.0
+ * 
+ * @author 'Ramesh Kodumuru' for AppiumGuide [appiumguide@gmail.com]
+ */
 
 public class QueryAppStateTest {
 	
@@ -38,8 +44,8 @@ public class QueryAppStateTest {
 	@AfterTest
 	public void teardown() {
 		if(driver!=null) {
-			//driver.quit();
-			System.out.println("Test Completed");
+			driver.quit();
+			System.out.println("Test Execution Completed");
 		}
 	}
 	

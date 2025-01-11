@@ -44,7 +44,7 @@ public class Test1 {
 	@AfterTest
 	public void teardown1() {
 		if(driver!=null) {
-			//driver.quit();
+			driver.quit();
 			System.out.println("Test Completed");
 		}
 	}
