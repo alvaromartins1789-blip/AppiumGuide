@@ -1,5 +1,4 @@
-
-package com.appiumguide.demo1;
+package demo;
 
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -10,7 +9,15 @@ import io.appium.java_client.android.options.UiAutomator2Options;
 import java.net.*;
 import java.time.Duration;
 
-public class Sample {
+/**
+ * Script Details - Appium Concepts | Appium command-To Get “RemoteAddress” for both iOS & Android
+ * 
+ * appium-java-client version: 9.3.0
+ * 
+ * @author 'Ramesh Kodumuru' for AppiumGuide [appiumguide@gmail.com]
+ */
+
+public class GetRemoteAddressDemo {
 	
 	private AndroidDriver driver;
 					
@@ -22,7 +29,7 @@ public class Sample {
 		cap.setDeviceName("Pixel8Pro");
 		
 					
-		driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), cap);
+		driver = new AndroidDriver(new URL("http://127.0.0.1:10000"), cap);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(100));
 		
 	}
@@ -30,7 +37,9 @@ public class Sample {
 	@Test
 	public void test() throws InterruptedException {
 		
-		
+		//Get Appium Server Remote Address
+		URL url=driver.getRemoteAddress();
+		System.out.println("Appium Server Remote Address - "+url);
 		
 	}
 			
@@ -46,4 +55,5 @@ public class Sample {
 	
 
 }
+
 
