@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-01-19T00:30:05 IST" name="Default suite" finished-at="2025-01-19T00:30:11 IST" duration-ms="5946">
+  <suite started-at="2025-01-19T01:01:20 IST" name="Default suite" finished-at="2025-01-19T01:01:26 IST" duration-ms="6765">
     <groups>
     </groups>
-    <test started-at="2025-01-19T00:30:05 IST" name="Default test" finished-at="2025-01-19T00:30:11 IST" duration-ms="5946">
-      <class name="demo.GetRemoteAddressDemo">
-        <test-method is-config="true" signature="setup()[pri:0, instance:demo.GetRemoteAddressDemo@480d3575]" started-at="2025-01-19T00:30:05 IST" name="setup" finished-at="2025-01-19T00:30:11 IST" duration-ms="5892" status="PASS">
+    <test started-at="2025-01-19T01:01:20 IST" name="Default test" finished-at="2025-01-19T01:01:26 IST" duration-ms="6765">
+      <class name="demo.GetDisplayDensityDemo">
+        <test-method is-config="true" signature="setup()[pri:0, instance:demo.GetDisplayDensityDemo@480d3575]" started-at="2025-01-19T01:01:20 IST" name="setup" finished-at="2025-01-19T01:01:26 IST" duration-ms="6675" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="test()[pri:0, instance:demo.GetRemoteAddressDemo@480d3575]" started-at="2025-01-19T00:30:11 IST" name="test" finished-at="2025-01-19T00:30:11 IST" duration-ms="9" status="PASS">
+        <test-method signature="test()[pri:0, instance:demo.GetDisplayDensityDemo@480d3575]" started-at="2025-01-19T01:01:26 IST" name="test" finished-at="2025-01-19T01:01:26 IST" duration-ms="60" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:demo.GetRemoteAddressDemo@480d3575]" started-at="2025-01-19T00:30:11 IST" name="teardown" finished-at="2025-01-19T00:30:11 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:demo.GetDisplayDensityDemo@480d3575]" started-at="2025-01-19T01:01:26 IST" name="teardown" finished-at="2025-01-19T01:01:26 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- demo.GetRemoteAddressDemo -->
+      </class> <!-- demo.GetDisplayDensityDemo -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
