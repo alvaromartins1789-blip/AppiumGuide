@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-01-14T23:30:05 IST" name="Default suite" finished-at="2025-01-14T23:30:20 IST" duration-ms="14709">
+  <suite started-at="2025-01-18T21:42:50 IST" name="Default suite" finished-at="2025-01-18T21:42:56 IST" duration-ms="6457">
     <groups>
     </groups>
-    <test started-at="2025-01-14T23:30:05 IST" name="Default test" finished-at="2025-01-14T23:30:20 IST" duration-ms="14709">
-      <class name="com.appiumguide.demo1.Sample2">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.appiumguide.demo1.Sample2@26abb146]" started-at="2025-01-14T23:30:05 IST" name="setup" finished-at="2025-01-14T23:30:10 IST" duration-ms="4689" status="PASS">
+    <test started-at="2025-01-18T21:42:50 IST" name="Default test" finished-at="2025-01-18T21:42:56 IST" duration-ms="6457">
+      <class name="demo.DeviceDateTimeDemo">
+        <test-method is-config="true" signature="setup()[pri:0, instance:demo.DeviceDateTimeDemo@480d3575]" started-at="2025-01-18T21:42:50 IST" name="setup" finished-at="2025-01-18T21:42:56 IST" duration-ms="5751" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="test()[pri:0, instance:com.appiumguide.demo1.Sample2@26abb146]" started-at="2025-01-14T23:30:10 IST" name="test" finished-at="2025-01-14T23:30:20 IST" duration-ms="9990" status="PASS">
+        <test-method signature="test()[pri:0, instance:demo.DeviceDateTimeDemo@480d3575]" started-at="2025-01-18T21:42:56 IST" name="test" finished-at="2025-01-18T21:42:56 IST" duration-ms="675" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.appiumguide.demo1.Sample2@26abb146]" started-at="2025-01-14T23:30:20 IST" name="teardown" finished-at="2025-01-14T23:30:20 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:demo.DeviceDateTimeDemo@480d3575]" started-at="2025-01-18T21:42:56 IST" name="teardown" finished-at="2025-01-18T21:42:56 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- com.appiumguide.demo1.Sample2 -->
+      </class> <!-- demo.DeviceDateTimeDemo -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

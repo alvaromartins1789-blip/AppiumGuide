@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.appiumguide.demo1.Sample2">
+      <class name="demo.MobileScrollDemo">
         <methods>
-          <include name="test"/>
-          <include name="teardown"/>
           <include name="setup"/>
+          <include name="test3"/>
+          <include name="teardown"/>
         </methods>
-      </class> <!-- com.appiumguide.demo1.Sample2 -->
+      </class> <!-- demo.MobileScrollDemo -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
