@@ -40,6 +40,7 @@ public class Sample {
 		
 		if(driver!=null) {
 			//driver.quit();
+			System.out.println("Test Completed");
 		}
 		
 	}
