@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="demo.PowerManagementDemo">
+      <class name="com.appiumguide.demo1.Sample">
         <methods>
+          <include name="test"/>
           <include name="teardown"/>
           <include name="setup"/>
-          <include name="test"/>
         </methods>
-      </class> <!-- demo.PowerManagementDemo -->
+      </class> <!-- com.appiumguide.demo1.Sample -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
