@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.appiumguide.demo1.Sample">
+      <class name="com.appiumguide.gestures_plugin.SwipeGestureDemo">
         <methods>
           <include name="test"/>
-          <include name="teardown"/>
           <include name="setup"/>
+          <include name="teardown"/>
         </methods>
-      </class> <!-- com.appiumguide.demo1.Sample -->
+      </class> <!-- com.appiumguide.gestures_plugin.SwipeGestureDemo -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
