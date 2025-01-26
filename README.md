@@ -1,1 +1,1 @@
-AppiumGuide
+AppiumGuide Channel
