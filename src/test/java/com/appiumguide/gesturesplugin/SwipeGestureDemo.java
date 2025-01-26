@@ -1,4 +1,4 @@
-package com.appiumguide.gestures_plugin;
+package com.appiumguide.gesturesplugin;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebElement;
