@@ -11,9 +11,12 @@ import com.google.common.collect.ImmutableMap;
 
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import java.net.*;
 import java.time.Duration;
+import java.util.Map;
 
 public class Sample {
 	
@@ -24,7 +27,7 @@ public class Sample {
 		UiAutomator2Options cap=new UiAutomator2Options();
 		cap.setPlatformName("android");
 		cap.setAutomationName("uiautomator2");
-		cap.setDeviceName("Pixel8Pro");
+		cap.setDeviceName("Pixel7Pro11");
 		
 					
 		driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), cap);
@@ -35,7 +38,7 @@ public class Sample {
 	@Test
 	public void test() throws InterruptedException {
 		
-		
+
 	}
 			
 		
