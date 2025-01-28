@@ -1,4 +1,4 @@
-package demo;
+package com.appiumguide.w3cmobilegestures;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -6,28 +6,28 @@ import org.openqa.selenium.remote.RemoteWebElement;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
 import com.google.common.collect.ImmutableMap;
+
+
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.nativekey.AndroidKey;
-import io.appium.java_client.android.nativekey.KeyEvent;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import java.net.*;
 import java.time.Duration;
 
 /**
- * Script Details - (Part-4)-Perform ‘FlingGesture’ based on element & direction - "up"
+ * Script Details - How to Perform "Scroll" Gesture - Scrolling : Based on Percent(0.25,0.50,0.75,1.0)
  * 
  * appium-java-client version: 9.3.0
  * 
  * @author 'Ramesh Kodumuru' for AppiumGuide [appiumguide@gmail.com]
  */
 
-public class FlingUpDemo {
+public class Scrollbasedonpercent {
 	
 	private AndroidDriver driver;
-	WebElement element;
-	int speedvalue;
+	
 			
 	@BeforeTest
 	public void setup() throws MalformedURLException {
@@ -45,41 +45,12 @@ public class FlingUpDemo {
 	@Test
 	public void test() throws InterruptedException {
 		
-		//Perform fling gesture to open notification.
+		WebElement element=driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().className(\"android.widget.ScrollView\")"));
 		
-		System.out.println("Perform fling gesture to open notification.");
-		
-		element=driver.findElement(AppiumBy.id("com.google.android.apps.nexuslauncher:id/workspace"));
-		
-		speedvalue=(int)(7500*2.625);
-		
-		((JavascriptExecutor)driver).executeScript("mobile: flingGesture",ImmutableMap.of(
+		((JavascriptExecutor)driver).executeScript("mobile: scrollGesture",ImmutableMap.of(
 				"elementId",((RemoteWebElement)element).getId(),
-				"direction","up",
-				"speed",speedvalue
-				));
-		
-		Thread.sleep(3000);
-		
-		driver.pressKey(new KeyEvent(AndroidKey.HOME));
-		
-		Thread.sleep(3000);
-		
-		driver.activateApp("in.burgerking.android");
-		
-		Thread.sleep(3000);
-		
-		//Perform fling gesture to refresh the app.
-		System.out.println("Perform fling gesture to refresh the app.");
-		
-		element=driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().className(\"android.widget.LinearLayout\").instance(0)"));
-		
-		
-		
-		((JavascriptExecutor)driver).executeScript("mobile: flingGesture",ImmutableMap.of(
-				"elementId",((RemoteWebElement)element).getId(),
-				"direction","up"				
-				));				
+				"direction","down",
+				"percent",0.88));	//75% = 0.75,50% = 0.5,100%= 1.0			
 	}
 			
 		

@@ -1,4 +1,4 @@
-package demo;
+package com.appiumguide.w3cmobilegestures;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
