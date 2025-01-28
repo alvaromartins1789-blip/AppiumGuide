@@ -1,4 +1,4 @@
-package demo;
+package com.appiumguide.uiscrollable;
 
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -11,14 +11,14 @@ import java.net.*;
 import java.time.Duration;
 
 /**
- * Script Details - "Scroll Gestures”UiScrollable’|How to perform "Very Lengthy Vertical Scroll" by using UiScrollable
+ * Script Details - "Scroll Gestures” -‘UiScrollable’ | How to perform "Scroll to End" by using 'UiScrollable' Class
  * 
  * appium-java-client version: 9.3.0
  * 
  * @author 'Ramesh Kodumuru' for AppiumGuide [appiumguide@gmail.com]
  */
 
-public class ScrollLengthyVerticalTest {
+public class ScrollToEndDemo  {
 	
 	private AndroidDriver driver;
 	
@@ -35,35 +35,24 @@ public class ScrollLengthyVerticalTest {
 		
 			
 	}
-	
 	@Test
-	public void demo() throws InterruptedException {
+	public void test1() throws InterruptedException {
 		
 		driver.activateApp("io.appium.android.apis");
 		
 		driver.findElement(AppiumBy.accessibilityId("Views")).click();
 		
-		driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector().scrollable(true))"+
-				".scrollIntoView(new UiSelector().text(\"Lists\"))"));
+		driver.findElement(AppiumBy.androidUIAutomator(
+		        "new UiScrollable(new UiSelector().scrollable(true))" +
+		         ".scrollIntoView(new UiSelector().text(\"Lists\"))"));
 		
 		driver.findElement(AppiumBy.accessibilityId("Lists")).click();
 		
 		driver.findElement(AppiumBy.accessibilityId("15. Selection Mode")).click();
 		
-
-		driver.findElement(AppiumBy.androidUIAutomator(
-				"new UiScrollable(new UiSelector().scrollable(true)).setAsVerticalList().setMaxSearchSwipes(50)" +
-				".scrollIntoView(new UiSelector().text(\"Zanetti Parmigiano Reggiano\"))"));
-		
-		driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().text(\"Zanetti Parmigiano Reggiano\")")).click();
-		
 		Thread.sleep(3000);
-		
 		driver.findElement(AppiumBy.androidUIAutomator(
-				"new UiScrollable(new UiSelector().scrollable(true)).setAsVerticalList().setMaxSearchSwipes(50)" +
-				".scrollIntoView(new UiSelector().text(\"Abbaye du Mont des Cats\"))"));
-		
-		driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().text(\"Abbaye du Mont des Cats\")")).click();
+	            "new UiScrollable(new UiSelector().scrollable(true)).scrollToEnd(50)"));		
 		
 	}
 	
@@ -81,6 +70,5 @@ public class ScrollLengthyVerticalTest {
 	
 
 }
-
 
 

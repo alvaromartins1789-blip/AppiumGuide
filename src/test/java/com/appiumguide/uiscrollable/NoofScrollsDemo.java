@@ -1,4 +1,4 @@
-package demo;
+package com.appiumguide.uiscrollable;
 
 
 import org.testng.annotations.AfterTest;
@@ -6,20 +6,21 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
 import io.appium.java_client.android.options.UiAutomator2Options;
-
 import java.net.*;
 import java.time.Duration;
 
 /**
- * Script Details - "Scroll Gestures” -‘UiScrollable’| How to perform "Vertical Scroll" by using 'UiScrollable' Class
+ * Script Details - 6:"Scroll Gestures”-‘UiScrollable’-How to perform/define "No of Scrolls"by using UiScrollable Class
  * 
  * appium-java-client version: 9.3.0
  * 
  * @author 'Ramesh Kodumuru' for AppiumGuide [appiumguide@gmail.com]
  */
 
-public class ScrollVerticalDemo {
+public class NoofScrollsDemo {
 	
 	private AndroidDriver driver;
 	
@@ -36,7 +37,6 @@ public class ScrollVerticalDemo {
 		
 			
 	}
-	
 	@Test
 	public void test1() {
 		
@@ -45,18 +45,17 @@ public class ScrollVerticalDemo {
 		driver.findElement(AppiumBy.accessibilityId("Views")).click();
 		
 		driver.findElement(AppiumBy.androidUIAutomator(
-		        "new UiScrollable(new UiSelector().scrollable(true))" +
-		         ".scrollIntoView(new UiSelector().text(\"Lists\"))"));
+		        "new UiScrollable(new UiSelector().scrollable(true)).setMaxSearchSwipes(1)" +
+		         ".scrollIntoView(new UiSelector().text(\"Tabs\"))"));
 		
-		driver.findElement(AppiumBy.accessibilityId("Lists")).click();
+		driver.pressKey(new KeyEvent(AndroidKey.BACK));
 		
-		driver.findElement(AppiumBy.accessibilityId("01. Array")).click();
+		driver.findElement(AppiumBy.accessibilityId("Views")).click();
+		
 		
 		driver.findElement(AppiumBy.androidUIAutomator(
-		        "new UiScrollable(new UiSelector().scrollable(true)).setAsVerticalList()" +
-		         ".scrollIntoView(new UiSelector().text(\"Lists\"))"));
-		
-		
+		        "new UiScrollable(new UiSelector().scrollable(true)).setMaxSearchSwipes(2)" +
+		         ".scrollIntoView(new UiSelector().text(\"Tabs\"))"));
 	}
 	
 			
@@ -67,6 +66,7 @@ public class ScrollVerticalDemo {
 		if(driver!=null) {
 			driver.quit();
 			System.out.println("Test Execution Completed");
+
 		}
 		
 	}

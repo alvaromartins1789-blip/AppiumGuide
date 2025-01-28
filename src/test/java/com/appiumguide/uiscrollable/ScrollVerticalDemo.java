@@ -1,4 +1,5 @@
-package demo;
+package com.appiumguide.uiscrollable;
+
 
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -11,14 +12,14 @@ import java.net.*;
 import java.time.Duration;
 
 /**
- * Script Details - "Scroll Gestures” -‘UiScrollable’ | How to perform "Scroll to End" by using 'UiScrollable' Class
+ * Script Details - "Scroll Gestures” -‘UiScrollable’| How to perform "Vertical Scroll" by using 'UiScrollable' Class
  * 
  * appium-java-client version: 9.3.0
  * 
  * @author 'Ramesh Kodumuru' for AppiumGuide [appiumguide@gmail.com]
  */
 
-public class ScrollToEndDemo  {
+public class ScrollVerticalDemo {
 	
 	private AndroidDriver driver;
 	
@@ -35,8 +36,9 @@ public class ScrollToEndDemo  {
 		
 			
 	}
+	
 	@Test
-	public void test1() throws InterruptedException {
+	public void test1() {
 		
 		driver.activateApp("io.appium.android.apis");
 		
@@ -48,11 +50,12 @@ public class ScrollToEndDemo  {
 		
 		driver.findElement(AppiumBy.accessibilityId("Lists")).click();
 		
-		driver.findElement(AppiumBy.accessibilityId("15. Selection Mode")).click();
+		driver.findElement(AppiumBy.accessibilityId("01. Array")).click();
 		
-		Thread.sleep(3000);
 		driver.findElement(AppiumBy.androidUIAutomator(
-	            "new UiScrollable(new UiSelector().scrollable(true)).scrollToEnd(50)"));		
+		        "new UiScrollable(new UiSelector().scrollable(true)).setAsVerticalList()" +
+		         ".scrollIntoView(new UiSelector().text(\"Lists\"))"));
+		
 		
 	}
 	
@@ -70,5 +73,6 @@ public class ScrollToEndDemo  {
 	
 
 }
+
 
 

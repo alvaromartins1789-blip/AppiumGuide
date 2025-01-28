@@ -1,4 +1,4 @@
-package demo;
+package com.appiumguide.uiscrollable;
 
 
 import org.testng.annotations.AfterTest;
@@ -12,14 +12,14 @@ import java.net.*;
 import java.time.Duration;
 
 /**
- * Script Details - "Scroll Gestures” -‘UiScrollable’ | How to perform "scrollForward"-(i.e. moves exactly one view)
+ * Script Details - "Scroll Gestures” -‘UiScrollable’ | How to perform "scrollBackward"-(i.e. moves exactly one view)
  * 
  * appium-java-client version: 9.3.0
  * 
  * @author 'Ramesh Kodumuru' for AppiumGuide [appiumguide@gmail.com]
  */
 
-public class ScrollForwardDemo {
+public class ScrollBackwardDemo {
 	
 	private AndroidDriver driver;
 	
@@ -37,16 +37,19 @@ public class ScrollForwardDemo {
 			
 	}
 	@Test
-	public void test1() {
+	public void test1() throws InterruptedException {
 		
 		driver.activateApp("io.appium.android.apis");
 		
 		driver.findElement(AppiumBy.accessibilityId("Views")).click();
 		
 		driver.findElement(AppiumBy.androidUIAutomator(
-				"new UiScrollable(new UiSelector().scrollable(true)).scrollForward(100)"));
+	            "new UiScrollable(new UiSelector().scrollable(true)).scrollToEnd(3)"));
 		
+		Thread.sleep(3000);
 		
+		driver.findElement(AppiumBy.androidUIAutomator(
+				"new UiScrollable(new UiSelector().scrollable(true)).scrollBackward(100)"));
 		
 	}
 			

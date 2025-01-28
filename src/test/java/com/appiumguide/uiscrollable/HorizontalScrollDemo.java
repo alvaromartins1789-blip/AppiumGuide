@@ -1,30 +1,27 @@
-package demo;
+package com.appiumguide.uiscrollable;
 
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.nativekey.AndroidKey;
-import io.appium.java_client.android.nativekey.KeyEvent;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import java.net.*;
 import java.time.Duration;
 
 /**
- * Script Details - "Scroll Gestures” -‘UiScrollable’ | How to perform "Simple Scroll" by using 'UiScrollable' Class
+ * Script Details - "Scroll Gestures”-‘UiScrollable’ |How to perform "Horizontal Scroll" by using UiScrollable Class
  * 
  * appium-java-client version: 9.3.0
  * 
  * @author 'Ramesh Kodumuru' for AppiumGuide [appiumguide@gmail.com]
  */
 
-public class ScrollDemo1 {
+public class HorizontalScrollDemo {
 	
 	private AndroidDriver driver;
 	
-	@BeforeClass
+	@BeforeTest
 	public void setup() throws MalformedURLException {
 		UiAutomator2Options cap=new UiAutomator2Options();
 		cap.setPlatformName("android");
@@ -37,45 +34,30 @@ public class ScrollDemo1 {
 		
 			
 	}
-	
 	@Test
-	public void ScrollTest1() throws InterruptedException {
-		
+	public void test1() {
 		driver.activateApp("io.appium.android.apis");
 		
 		driver.findElement(AppiumBy.accessibilityId("Views")).click();
 		
-		
-		driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector().scrollable(true))"+
-				".scrollIntoView(new UiSelector().text(\"Tabs\"))"));
-		
-		Thread.sleep(3000);
+		driver.findElement(AppiumBy.androidUIAutomator(
+		        "new UiScrollable(new UiSelector().scrollable(true))" +
+		         ".scrollIntoView(new UiSelector().text(\"Tabs\"))"));
 		
 		driver.findElement(AppiumBy.accessibilityId("Tabs")).click();
 		
-		Thread.sleep(3000);
+		driver.findElement(AppiumBy.accessibilityId("5. Scrollable")).click();
 		
-		driver.pressKey(new KeyEvent(AndroidKey.BACK));
+		driver.findElement(AppiumBy.androidUIAutomator(
+		        "new UiScrollable(new UiSelector().scrollable(true)).setAsHorizontalList()" +
+		         ".scrollIntoView(new UiSelector().text(\"TAB 9\"))"));		
 		
-		Thread.sleep(3000);
-		
-		
-		driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector().scrollable(true))"+
-				".scrollIntoView(new UiSelector().textContains(\"Animati\"))"));
-		
-		Thread.sleep(3000);
-		
-		
-		driver.findElement(AppiumBy.accessibilityId("Animation")).click();
-		
-		
-		
+		driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().text(\"TAB 9\")")).click();		
 		
 	}
-	
 			
 		
-	@AfterClass
+	@AfterTest
 	public void teardown() {
 		
 		if(driver!=null) {
@@ -87,3 +69,6 @@ public class ScrollDemo1 {
 	
 
 }
+
+
+
