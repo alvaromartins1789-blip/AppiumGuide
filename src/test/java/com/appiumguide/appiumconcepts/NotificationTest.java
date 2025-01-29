@@ -1,38 +1,34 @@
-package demo;
+package com.appiumguide.appiumconcepts;
 
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.time.Duration;
-
-import org.openqa.selenium.ScreenOrientation;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
+import java.net.*;
+import java.time.Duration;
 
 /**
- * Script Details - Appium Concepts : "ScreenOrientation-Landscape/Portrait"
+ * Script Details - Appium Concepts : Appium Mobile Automation - Open Notifications - Appium2.0
  * 
  * appium-java-client version: 9.3.0
  * 
  * @author 'Ramesh Kodumuru' for AppiumGuide [appiumguide@gmail.com]
  */
 
-public class OrientationTest {
+public class NotificationTest {
 	
 	private AndroidDriver driver;
-	ScreenOrientation currentorientation;
 	@BeforeTest
 	public void steup() throws MalformedURLException {
 		UiAutomator2Options cap =new UiAutomator2Options();
 		cap.setPlatformName("android");
 		cap.setAutomationName("uiautomator2");
-		cap.setDeviceName("Pixal7a");
-		cap.setAppPackage("com.google.android.deskclock");
-		cap.setAppActivity("com.android.deskclock.DeskClock");
-		//cap.setOrientation(currentorientation.LANDSCAPE);
+		cap.setDeviceName("device14");
+		cap.setAppPackage("com.wdiodemoapp");
+		cap.setAppActivity("com.wdiodemoapp.MainActivity");
+		
 		
 		driver=new AndroidDriver(new URL("http://127.0.0.1:4723"), cap);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -43,21 +39,17 @@ public class OrientationTest {
 		if(driver!=null) {
 			driver.quit();
 			System.out.println("Test Execution Completed");
+
 		}
 	}
+	
 	@Test
-	public void orientationexampl() throws InterruptedException {
+	public void notificationexample() throws InterruptedException {
 		
-		
-		currentorientation=driver.getOrientation();
-		System.out.println("Current Orientation - "+currentorientation);
+		driver.sendSMS("1234567890", "test message for notifications");
 		Thread.sleep(5000);
-		driver.rotate(ScreenOrientation.LANDSCAPE);
-		Thread.sleep(5000);
-		driver.rotate(ScreenOrientation.PORTRAIT);
-		
+		driver.openNotifications();
 		
 	}
-	
 
 }

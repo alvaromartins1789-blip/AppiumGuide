@@ -1,5 +1,5 @@
 
-package demo;
+package com.appiumguide.appiumconcepts;
 
 import java.net.MalformedURLException;
 import java.net.URL;

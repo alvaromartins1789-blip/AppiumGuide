@@ -1,4 +1,4 @@
-package demo;
+package com.appiumguide.appiumconcepts;
 
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;

@@ -1,4 +1,4 @@
-package demo;
+package com.appiumguide.appiumconcepts;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;

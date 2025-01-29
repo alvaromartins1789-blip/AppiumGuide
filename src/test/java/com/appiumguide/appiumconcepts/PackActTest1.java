@@ -1,4 +1,8 @@
-package demo;
+package com.appiumguide.appiumconcepts;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.time.Duration;
 
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -6,30 +10,28 @@ import org.testng.annotations.Test;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
-import java.net.*;
-import java.time.Duration;
 
 /**
- * Script Details - Appium Concepts : Appium Mobile Automation - Open Notifications - Appium2.0
+ * Script Details - Appium Concepts : How to Get "appPackage" and "appActivity" during runtime(programmatically)
  * 
  * appium-java-client version: 9.3.0
  * 
  * @author 'Ramesh Kodumuru' for AppiumGuide [appiumguide@gmail.com]
  */
 
-public class NotificationTest {
+public class PackActTest1 {
 	
-	private AndroidDriver driver;
+private AndroidDriver driver;
+	
 	@BeforeTest
 	public void steup() throws MalformedURLException {
 		UiAutomator2Options cap =new UiAutomator2Options();
 		cap.setPlatformName("android");
 		cap.setAutomationName("uiautomator2");
-		cap.setDeviceName("device14");
-		cap.setAppPackage("com.wdiodemoapp");
-		cap.setAppActivity("com.wdiodemoapp.MainActivity");
-		
-		
+		cap.setDeviceName("Pixal7a");
+		cap.setAppPackage("com.google.android.deskclock");
+		cap.setAppActivity("com.android.deskclock.DeskClock");
+				
 		driver=new AndroidDriver(new URL("http://127.0.0.1:4723"), cap);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
@@ -39,17 +41,15 @@ public class NotificationTest {
 		if(driver!=null) {
 			driver.quit();
 			System.out.println("Test Execution Completed");
-
 		}
 	}
-	
 	@Test
-	public void notificationexample() throws InterruptedException {
+	public void PackActSample1() {
 		
-		driver.sendSMS("1234567890", "test message for notifications");
-		Thread.sleep(5000);
-		driver.openNotifications();
-		
+		String pack=driver.getCurrentPackage();
+		System.out.println("Current apppackage details - "+pack);
+		String act=driver.currentActivity();
+		System.out.println("Current appActivity details - "+act);
 	}
 
 }

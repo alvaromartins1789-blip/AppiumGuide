@@ -1,4 +1,4 @@
-package demo;
+package com.appiumguide.appiumconcepts;
 
 import java.time.Duration;
 import java.util.Base64;
