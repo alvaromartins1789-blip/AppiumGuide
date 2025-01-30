@@ -1,4 +1,4 @@
-package demo;
+package com.appiumguide.w3cactionsgestures;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;

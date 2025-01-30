@@ -1,4 +1,4 @@
-package demo;
+package com.appiumguide.w3cactionsgestures;
 
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebElement;
