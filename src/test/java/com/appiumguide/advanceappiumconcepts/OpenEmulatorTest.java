@@ -1,4 +1,4 @@
-package demo;
+package com.appiumguide.advanceappiumconcepts;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -14,7 +14,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 
 /**
- * Script Details - 
+ * Script Details - 1.How to open emulator programmatically through ‘Appium-DesiredCapabilities'-Mobile Automation
  * 
  * appium-java-client version: 9.3.0
  * 
