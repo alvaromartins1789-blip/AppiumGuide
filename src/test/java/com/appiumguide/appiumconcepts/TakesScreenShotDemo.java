@@ -63,7 +63,7 @@ public class TakesScreenShotDemo {
 		driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().text(\"Swipe\")")).click();
 		Thread.sleep(3000);
 		
-		//Screenshot based on outputtype bytes
+		//Screenshot based on outputtype Base64
 		System.out.println("Screenshot based on outputtype Base64");
 		byte[] byteArray;
 		String scrFile1=driver.getScreenshotAs(OutputType.BASE64);
