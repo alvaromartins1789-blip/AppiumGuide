@@ -1,61 +1,33 @@
-Appium Guide
-
-
-
-📌 Introduction
+## 📌 Introduction
 
 Appium Guide is a comprehensive resource for mastering mobile automation using Appium. Whether you're a beginner or an experienced tester, this guide will help you understand and implement automation testing efficiently.
 
-🚀 Features
 
-Step-by-step Appium setup and configuration
 
-Practical examples and test scripts
+  ## 🚀 About Me
+ 👨‍💻 Hi, Me Kodumuru Ramesh–14+ yrs in IT, expert in Appium, Selenium & Mobile Test Automation. Sharing knowledge via AppiumGuide 
 
-Best practices and troubleshooting tips
+  
 
-Supports Android and iOS automation
 
-📥 Installation
+  ## 🔗 Links
+ [![medium](https://img.shields.io/badge/medium-000?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@appiumguide)
+[![youtube](https://img.shields.io/badge/youtube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@AppiumGuide/playlists)
+  [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kodumururamesh/)
+[![blogger](https://img.shields.io/badge/blogger-FF5722?style=for-the-badge&logo=blogger&logoColor=white)](https://appiumguide-by-kodumururamesh.blogspot.com/)
 
-Clone this repository:
+  
+  
 
-git clone https://github.com/yourusername/AppiumGuide.git
 
-Install dependencies:
+  ## 🛠 Skills
+ Appium 2.0, Appium Inspector, Gestures - W3C Mobile gestures, W3C Actions API, AppiumInspector-gestures, Gestures-Plugin
+  
+  
 
-npm install
 
-Start Appium server:
-
-appium
-
-📖 Usage
-
-Follow the guide to write and execute test scripts for automating mobile applications:
-
-Connect your mobile device/emulator
-
-Configure desired capabilities
-
-Run test scripts using your preferred testing framework
-
-🤝 Contributing
-
-Contributions are welcome! If you'd like to improve this guide:
-
-Fork the repository
-
-Create a new branch (feature-branch)
-
-Commit your changes
-
-Open a pull request
-
-📜 License
-
+  ## 📜 License
+  
 This project is licensed under the MIT License - see the LICENSE file for details.
-
-📧 Contact: If you have any questions, feel free to open an issue or reach out!
-
-AppiumGuide Channel
+  
+  
