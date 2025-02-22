@@ -1,5 +1,5 @@
 
-package com.appiumguide.demo1;
+package demo;
 
 import org.openqa.selenium.Point;
 import org.openqa.selenium.ScreenOrientation;
