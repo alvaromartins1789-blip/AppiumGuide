@@ -1,4 +1,4 @@
-## 📌 Introduction
+## 📌 AppiumGuide
 
 Appium Guide is a comprehensive resource for mastering mobile automation using Appium. Whether you're a beginner or an experienced tester, this guide will help you understand and implement automation testing efficiently.
 
@@ -22,6 +22,51 @@ Appium Guide is a comprehensive resource for mastering mobile automation using A
 
   ## 🛠 Skills
  Appium 2.0, Appium Inspector, Gestures - W3C Mobile gestures, W3C Actions API, AppiumInspector-gestures, Gestures-Plugin
+  
+  
+
+## 🚀 Getting Started
+
+Prerequisites
+
+Ensure you have the following installed:
+
+1. Node.js
+
+2. Appium Server
+
+3. Android SDK (for Android automation)
+
+4. Xcode (for iOS automation)
+
+## Installation
+  
+ Install Appium globally
+  
+  ```bash
+    npm install -g appium
+```
+Verify installation
+  ```bash
+    appium -v
+```
+## 📝 Usage
+
+Clone the repository:
+  ```bash
+    git clone https://github.com/AppiumGuide/AppiumGuide.git
+```
+
+      
+
+
+  ## 📧 Contact
+
+For any inquiries or support, feel free to reach out:
+
+Email: appiumguide@gmail.com
+
+🎯 My Motto – Keep Learning & Happy Learning! 😊
   
   
 
