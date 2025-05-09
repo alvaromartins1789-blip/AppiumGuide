@@ -46,6 +46,7 @@ public class NotificationTest {
 	@Test
 	public void notificationexample() throws InterruptedException {
 		
+		//Send a dummy sms using ".sendSMS" method
 		driver.sendSMS("1234567890", "test message for notifications");
 		Thread.sleep(5000);
 		driver.openNotifications();
