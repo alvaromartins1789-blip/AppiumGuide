@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 
 import com.google.common.collect.ImmutableMap;
 
+import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 
@@ -19,6 +20,8 @@ import java.util.Arrays;
 import java.util.Base64;
 import java.util.HashMap;
 import java.util.Map;
+
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.io.FileOutputStream;
@@ -47,7 +50,13 @@ public class AdbCommandDemo2 {
 	@Test
 	public void test() throws InterruptedException, IOException {
 		
-		   
+		File imageFile = new File(System.getProperty("user.dir")+"/Beverages.png");
+        byte[] fileContent = Files.readAllBytes(imageFile.toPath());
+        String base64Image = Base64.getEncoder().encodeToString(fileContent);
+
+        // Use AppiumBy.image()
+        WebElement imageElement = driver.findElement(AppiumBy.image(base64Image));
+        imageElement.click();
 		         /* 
 	            // Step 2: Compress local folder to zip
 	            String localFolderPath = "path/to/local/folder";

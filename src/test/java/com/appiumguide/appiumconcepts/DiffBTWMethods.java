@@ -1,29 +1,25 @@
-package com.appiumguide.gesturesUsingADBcommands;
+package com.appiumguide.appiumconcepts;
 
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import com.google.common.collect.ImmutableMap;
-
-import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 
-import java.io.File;
 import java.io.IOException;
 import java.net.*;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.time.Duration;
-import java.util.Arrays;
-import java.util.Base64;
-import java.util.HashMap;
-import java.util.Map;
 
+/**
+ * Script Details - Appium Concepts : Difference between methods .activateApp Vs .terminateApp Vs .removeApp
+ * 
+ * appium-java-client version: Latest
+ * 
+ * @author 'Ramesh Kodumuru' for AppiumGuide [appiumguide@gmail.com]
+ */
 
-public class AdbCommandDemo3 {
+public class DiffBTWMethods {
 	
 	private AndroidDriver driver;
 					
@@ -44,7 +40,27 @@ public class AdbCommandDemo3 {
 	@Test
 	public void test() throws InterruptedException, IOException {
 					
+		//Case-1: Start an wdiodemo app
+		driver.activateApp("com.wdiodemoapp");
+		System.out.println("Started wdiodemo app successfully");
 		
+		Thread.sleep(5000);
+				
+		//Case-2: Open the wdiodemo app from background
+		driver.activateApp("com.wdiodemoapp");
+		System.out.println("Opened the wdiodemo app successfully");
+		
+		
+		//Close the wdiodemo app
+		driver.terminateApp("com.wdiodemoapp");
+		System.out.println("Close the wdiodemo app");
+		
+		Thread.sleep(10000);
+		
+		//Uninstall the wdiodemo app
+		driver.removeApp("com.wdiodemoapp");
+		System.out.println("Uninstall the wdiodemo app");
+				
 		}
 			
 		
@@ -60,5 +76,6 @@ public class AdbCommandDemo3 {
 	
 
 }
+
 
 

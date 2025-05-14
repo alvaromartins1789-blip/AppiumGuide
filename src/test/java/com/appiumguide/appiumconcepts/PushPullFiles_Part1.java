@@ -1,10 +1,8 @@
-package com.appiumguide.gesturesUsingADBcommands;
+package com.appiumguide.appiumconcepts;
 
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
-import com.google.common.collect.ImmutableMap;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
@@ -15,13 +13,16 @@ import java.net.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.time.Duration;
-import java.util.Arrays;
-import java.util.Base64;
-import java.util.HashMap;
-import java.util.Map;
 
+/**
+ * Script Details - Appium Concepts : Part-1 : How to Push/Pull Files during runtime(Complete Details) using methods .pushFile(file) & .pullFile(act)
+ * 
+ * appium-java-client version: Latest
+ * 
+ * @author 'Ramesh Kodumuru' for AppiumGuide [appiumguide@gmail.com]
+ */
 
-public class AdbCommandDemo {
+public class PushPullFiles_Part1 {
 	
 	private AndroidDriver driver;
 					
@@ -30,7 +31,7 @@ public class AdbCommandDemo {
 		UiAutomator2Options cap=new UiAutomator2Options();
 		cap.setPlatformName("android");
 		cap.setAutomationName("uiautomator2");
-		cap.setDeviceName("device14");
+		cap.setDeviceName("Pixel8");
 		
 					
 		driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), cap);
@@ -41,21 +42,20 @@ public class AdbCommandDemo {
 		
 	@Test
 	public void test() throws InterruptedException, IOException {
+			
+		//.pushFile(remotepath, file)
 		
-			    
-        	
-        // Step 2: .pushFile(remotePath, base64Data)        
-        File file = new File(System.getProperty("user.dir")+"/3fingers.png");
-        byte[] fileContent = Files.readAllBytes(file.toPath());
-        byte[] base64String = Base64.getEncoder().encode(fileContent);
-
-        driver.pushFile("/sdcard/download/pushed_3fingers_base64.png", base64String);
-        System.out.println("File pushed from base64 string.");
+		driver.pushFile("/sdcard/download/pushed_sampleImage.png", new File(System.getProperty("user.dir")+"/sampleImage.png"));
+		System.out.println("Pushed the sampleImage.png to the test device");
 		
-        //.pullFile(remotePath)
-        byte[] pulledBase64 = driver.pullFile("/sdcard/download/pushed_3fingers_base64.png");
-        Files.write(Paths.get("pushed_3fingers_base64.png"), pulledBase64);
-        System.out.println("File pulled and saved as pushed_3fingers.png");
+		Thread.sleep(8000);
+		
+		//.pullFile(remotepath)
+		
+		byte[] pulledfile=driver.pullFile("/sdcard/download/pushed_sampleImage.png");
+		Files.write(Paths.get("pulled_sampleImage.png"), pulledfile);
+		System.out.println("File pulled & saved as pulled_sampleImage.png");
+		
 		}
 			
 		
