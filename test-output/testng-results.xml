@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-09T22:17:38 IST" name="Default suite" finished-at="2025-05-09T22:18:04 IST" duration-ms="26011">
+  <suite started-at="2025-05-13T20:52:12 IST" name="Default suite" finished-at="2025-05-13T20:52:34 IST" duration-ms="22317">
     <groups>
     </groups>
-    <test started-at="2025-05-09T22:17:38 IST" name="Default test" finished-at="2025-05-09T22:18:04 IST" duration-ms="26011">
-      <class name="com.appiumguide.gesturesUsingADBcommands.TapDemoUsingADB">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.appiumguide.gesturesUsingADBcommands.TapDemoUsingADB@f1da57d]" started-at="2025-05-09T22:17:38 IST" name="setup" finished-at="2025-05-09T22:17:45 IST" duration-ms="6993" status="PASS">
+    <test started-at="2025-05-13T20:52:12 IST" name="Default test" finished-at="2025-05-13T20:52:34 IST" duration-ms="22317">
+      <class name="com.appiumguide.appiumconcepts.ChangeLocationStateDemo">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.appiumguide.appiumconcepts.ChangeLocationStateDemo@f1da57d]" started-at="2025-05-13T20:52:12 IST" name="setup" finished-at="2025-05-13T20:52:27 IST" duration-ms="15646" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="test()[pri:0, instance:com.appiumguide.gesturesUsingADBcommands.TapDemoUsingADB@f1da57d]" started-at="2025-05-09T22:17:45 IST" name="test" finished-at="2025-05-09T22:18:04 IST" duration-ms="18711" status="PASS">
+        <test-method signature="test()[pri:0, instance:com.appiumguide.appiumconcepts.ChangeLocationStateDemo@f1da57d]" started-at="2025-05-13T20:52:27 IST" name="test" finished-at="2025-05-13T20:52:33 IST" duration-ms="5365" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.appiumguide.gesturesUsingADBcommands.TapDemoUsingADB@f1da57d]" started-at="2025-05-09T22:18:04 IST" name="teardown" finished-at="2025-05-09T22:18:04 IST" duration-ms="234" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.appiumguide.appiumconcepts.ChangeLocationStateDemo@f1da57d]" started-at="2025-05-13T20:52:33 IST" name="teardown" finished-at="2025-05-13T20:52:34 IST" duration-ms="1235" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- com.appiumguide.gesturesUsingADBcommands.TapDemoUsingADB -->
+      </class> <!-- com.appiumguide.appiumconcepts.ChangeLocationStateDemo -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

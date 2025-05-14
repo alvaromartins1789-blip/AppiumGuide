@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.appiumguide.gesturesUsingADBcommands.InstallapkByADB">
+      <class name="com.appiumguide.gesturesUsingADBcommands.AdbCommandDemo3">
         <methods>
+          <include name="teardown"/>
           <include name="setup"/>
           <include name="test"/>
-          <include name="teardown"/>
         </methods>
-      </class> <!-- com.appiumguide.gesturesUsingADBcommands.InstallapkByADB -->
+      </class> <!-- com.appiumguide.gesturesUsingADBcommands.AdbCommandDemo3 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
