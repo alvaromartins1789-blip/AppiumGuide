@@ -1,4 +1,4 @@
-package com.appiumguide.gesturesUsingADBcommands;
+package demo;
 
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;

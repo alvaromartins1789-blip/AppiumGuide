@@ -1,4 +1,4 @@
-package com.appiumguide.gesturesUsingADBcommands;
+package demo;
 
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -29,7 +29,7 @@ import java.net.URL;
 
 
 
-public class AdbCommandDemo2 {
+public class Sample10 {
 	
 	private AndroidDriver driver;
 					
@@ -69,12 +69,7 @@ public class AdbCommandDemo2 {
 	            String base64Zip = Base64.getEncoder().encodeToString(zipBytes);	            
 	            //driver.pushFolder("/data/local/tmp/testfolder", base64Zip);
 	            System.out.println("Folder pushed successfully.");
-				*/
-	            // Step 4: Pull folder from device
-	            byte[] pulledZip = driver.pullFolder("/sdcard/download/sample.zip");
-	            Files.write(Paths.get("downloaded_folder123.zip"), pulledZip);
-	            System.out.println("Folder pulled and saved as downloaded_folder123.zip.");
-	            
+				*/	                
 
 	        
 		   
