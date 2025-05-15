@@ -11,13 +11,10 @@ import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 
-import java.io.File;
 import java.io.IOException;
 import java.net.*;
 import java.time.Duration;
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Script Details - Perform ‘Tap’ Gesture on a element & mobile screen By Using/Running “adb Commands”
