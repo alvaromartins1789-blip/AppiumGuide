@@ -33,7 +33,7 @@ public class Sample {
 		UiAutomator2Options cap=new UiAutomator2Options();
 		cap.setPlatformName("android");
 		cap.setAutomationName("uiautomator2");
-		cap.setDeviceName("Pixel7Pro11");		
+		cap.setDeviceName("Pixel8");		
 					
 		driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), cap);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(100));
@@ -42,8 +42,7 @@ public class Sample {
 	
 	@Test
 	public void test() throws InterruptedException {
-		
-		
+	
 
 	}
 			
@@ -52,7 +51,7 @@ public class Sample {
 	public void teardown() {
 		
 		if(driver!=null) {
-			//driver.quit();
+			driver.quit();
 			System.out.println("Test Completed");
 		}
 		
