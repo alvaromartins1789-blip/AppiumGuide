@@ -1,28 +1,21 @@
 
 package demo;
 
-import org.openqa.selenium.Point;
-import org.openqa.selenium.ScreenOrientation;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Pause;
-import org.openqa.selenium.interactions.PointerInput;
-import org.openqa.selenium.interactions.Sequence;
-import org.openqa.selenium.remote.RemoteWebElement;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import com.google.common.collect.ImmutableMap;
-
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.nativekey.AndroidKey;
-import io.appium.java_client.android.nativekey.KeyEvent;
 import io.appium.java_client.android.options.UiAutomator2Options;
+
+import java.io.File;
+import java.io.IOException;
 import java.net.*;
+import java.nio.file.Files;
 import java.time.Duration;
-import java.util.Arrays;
-import java.util.Map;
+import java.util.Base64;
 
 public class Sample {
 	
@@ -33,7 +26,7 @@ public class Sample {
 		UiAutomator2Options cap=new UiAutomator2Options();
 		cap.setPlatformName("android");
 		cap.setAutomationName("uiautomator2");
-		cap.setDeviceName("Pixel8");		
+		cap.setDeviceName("Pixel9");		
 					
 		driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), cap);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(100));
@@ -41,11 +34,13 @@ public class Sample {
 	}
 	
 	@Test
-	public void test() throws InterruptedException {
+	public void test() throws InterruptedException, IOException {
 	
+			
 
 	}
-			
+	
+				
 		
 	@AfterTest
 	public void teardown() {

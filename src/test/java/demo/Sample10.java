@@ -38,7 +38,7 @@ public class Sample10 {
 		UiAutomator2Options cap=new UiAutomator2Options();
 		cap.setPlatformName("android");
 		cap.setAutomationName("uiautomator2");
-		cap.setDeviceName("device14");
+		cap.setDeviceName("device-13");
 		
 					
 		driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), cap);
@@ -50,13 +50,23 @@ public class Sample10 {
 	@Test
 	public void test() throws InterruptedException, IOException {
 		
+		/*
 		File imageFile = new File(System.getProperty("user.dir")+"/Beverages.png");
         byte[] fileContent = Files.readAllBytes(imageFile.toPath());
         String base64Image = Base64.getEncoder().encodeToString(fileContent);
+        */
+		System.out.println("started");
+		
+		File file = new File(System.getProperty("user.dir")+"/Beverages.png");
+		byte[] fileContent=Files.readAllBytes(file.toPath());
+        String base64Image = Base64.getEncoder().encodeToString(fileContent);		
+		
 
         // Use AppiumBy.image()
         WebElement imageElement = driver.findElement(AppiumBy.image(base64Image));
         imageElement.click();
+        System.out.println("stopped");
+       
 		         /* 
 	            // Step 2: Compress local folder to zip
 	            String localFolderPath = "path/to/local/folder";
