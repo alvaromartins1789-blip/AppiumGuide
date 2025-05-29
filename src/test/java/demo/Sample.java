@@ -1,15 +1,16 @@
 
 package demo;
 
-import org.openqa.selenium.WebElement;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
-
+import io.appium.java_client.imagecomparison.SimilarityMatchingOptions;
+import io.appium.java_client.imagecomparison.SimilarityMatchingResult;
 import java.io.File;
 import java.io.IOException;
 import java.net.*;
@@ -20,6 +21,7 @@ import java.util.Base64;
 public class Sample {
 	
 	private AndroidDriver driver;
+	File screenshot;
 						
 	@BeforeTest
 	public void setup() throws MalformedURLException {
@@ -35,9 +37,11 @@ public class Sample {
 	
 	@Test
 	public void test() throws InterruptedException, IOException {
-	
-			
+		
+		
+		
 
+        
 	}
 	
 				
@@ -46,7 +50,7 @@ public class Sample {
 	public void teardown() {
 		
 		if(driver!=null) {
-			driver.quit();
+			//driver.quit();
 			System.out.println("Test Completed");
 		}
 		

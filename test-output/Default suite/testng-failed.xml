@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.appiumguide.appiumimages.ImageLocatorDemo">
+      <class name="com.appiumguide.appiumimages.Sample">
         <methods>
           <include name="setup"/>
-          <include name="test"/>
           <include name="teardown"/>
+          <include name="test"/>
         </methods>
-      </class> <!-- com.appiumguide.appiumimages.ImageLocatorDemo -->
+      </class> <!-- com.appiumguide.appiumimages.Sample -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
