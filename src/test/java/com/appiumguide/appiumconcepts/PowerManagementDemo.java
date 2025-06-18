@@ -1,5 +1,4 @@
-
-package demo;
+package com.appiumguide.appiumconcepts;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -19,7 +18,16 @@ import java.nio.file.Files;
 import java.time.Duration;
 import java.util.Base64;
 
-public class Sample {
+/**
+ * Script Details - Appium Concepts : 🔥Automate Battery and Power Testing By Using Appium built-in methods setPowerCapacity +  setPowerAC
+ * 
+ * appium-java-client version: Latest
+ * 
+ * @author 'Ramesh Kodumuru' for AppiumGuide [appiumguide@gmail.com]
+ */
+
+@SuppressWarnings("unused")
+public class PowerManagementDemo  {
 	
 	private AndroidDriver driver;
 							
@@ -38,6 +46,29 @@ public class Sample {
 	@Test
 	public void test() throws InterruptedException, IOException {
 		
+		//To Change the Battery charge levels
+		System.out.println("Change the Battery charge level to - 75%");
+		driver.setPowerCapacity(75);
+		Thread.sleep(5000);
+		System.out.println("Change the Battery charge level to 10%");
+		driver.setPowerCapacity(10);
+		Thread.sleep(5000);
+		System.out.println("Change the Battery charge level to 100%");
+		driver.setPowerCapacity(100);
+		Thread.sleep(5000);
+		
+		//Simulate the plugging/unplugging the device charger
+		System.out.println("Simulate the plugging/unplugging the device charger");
+		
+		
+		//Unplug the device charger
+		System.out.println("Unplug the device charger -  'off' to simulate unplugged");
+		driver.setPowerAC(PowerACState.OFF);
+		Thread.sleep(8000);
+		//plug the device charger
+		System.out.println("plug the device charger - 'on' to simulate charging");
+		driver.setPowerAC(PowerACState.ON);
+		
 		        
 	}
 	
@@ -55,4 +86,5 @@ public class Sample {
 	
 
 }
+
 
