@@ -8,9 +8,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.PowerACState;
 import io.appium.java_client.android.options.UiAutomator2Options;
-import io.appium.java_client.imagecomparison.SimilarityMatchingOptions;
 import io.appium.java_client.imagecomparison.SimilarityMatchingResult;
 import java.io.File;
 import java.io.IOException;
@@ -22,6 +20,7 @@ import java.util.Base64;
 public class Sample {
 	
 	private AndroidDriver driver;
+	File screenshot;
 							
 	@BeforeTest
 	public void setup() throws MalformedURLException {

@@ -1,4 +1,4 @@
-package com.appiumguide.appiumimages;
+package com.appiumguide.appiumvisualTesting;
 
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterTest;

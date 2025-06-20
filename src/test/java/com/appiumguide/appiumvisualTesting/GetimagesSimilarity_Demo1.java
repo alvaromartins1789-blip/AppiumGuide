@@ -1,4 +1,4 @@
-package com.appiumguide.appiumimages;
+package com.appiumguide.appiumvisualTesting;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -17,7 +17,7 @@ import java.time.Duration;
 import java.util.Base64;
 
 /**
- * Script Details - Appium-Visual Testing : Complete Details On .getImagesSimilarity driver.getImagesSimilarity(byte[], byte[])
+ * Script Details - Appium-Visual Testing (Part-1): Complete Details On .getImagesSimilarity driver.getImagesSimilarity(byte[] base64image1, byte[] base64Image2)
  * 
  * appium-java-client version: Latest
  * 
@@ -53,7 +53,7 @@ public class GetimagesSimilarity_Demo1 {
 		
 		Thread.sleep(5000);
 		
-		//Step 2: Covert the file to base64image
+		//Step 2: Convert the file to base64image
 		System.out.println("Step 2: Covert the file to base64image");
 		
 		byte[] img1Bytes=Files.readAllBytes(new File(System.getProperty("user.dir")+"/actual_image.png").toPath());
