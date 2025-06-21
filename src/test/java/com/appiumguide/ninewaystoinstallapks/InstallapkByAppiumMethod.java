@@ -1,25 +1,25 @@
+package com.appiumguide.ninewaystoinstallapks;
 
-package demo;
 
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import com.google.common.collect.ImmutableMap;
-
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
-import io.appium.java_client.imagecomparison.SimilarityMatchingResult;
-import java.io.File;
 import java.io.IOException;
 import java.net.*;
-import java.nio.file.Files;
 import java.time.Duration;
-import java.util.Base64;
 
-public class Sample {
+/**
+ * Script Details - 5. “9” Ways to Install APK’s -  By Using ‘.installApp()’ Appium Built-in Method at runtime
+ * 
+ * appium-java-client version: Latest
+ * 
+ * @author 'Ramesh Kodumuru' for AppiumGuide [appiumguide@gmail.com]
+ */
+
+public class InstallapkByAppiumMethod {
 	
 	private AndroidDriver driver;
 								
@@ -38,7 +38,19 @@ public class Sample {
 	@Test
 	public void test() throws InterruptedException, IOException {
 		
+		if(driver.isAppInstalled("com.wdiodemoapp")) {
+			System.out.println("The wdio app is already installed");
+		}else {
+			System.out.println("The wdio app is not installed");
+			//Install APK file using 'installApp' method
+			driver.installApp(System.getProperty("user.dir")+"/APK_Files/android.wdio.native.app.v1.0.8.apk");
+			System.out.println("Able to install wdio app successfully");
+			
+		}
 		
+		Thread.sleep(5000);
+		
+		driver.activateApp("com.wdiodemoapp");		
 		        
 	}
 	
@@ -48,7 +60,7 @@ public class Sample {
 	public void teardown() {
 		
 		if(driver!=null) {
-			//driver.quit();
+			driver.quit();
 			System.out.println("Test Completed");
 		}
 		
