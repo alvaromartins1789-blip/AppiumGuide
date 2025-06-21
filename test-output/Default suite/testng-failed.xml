@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.appiumguide.ninewaystoinstallapks.InstallapkByAppiumMethod">
+      <class name="com.appiumguide.ninewaystoinstallapks.InstallapkByUIAutomator2Command">
         <methods>
-          <include name="teardown"/>
-          <include name="setup"/>
           <include name="test"/>
+          <include name="setup"/>
+          <include name="teardown"/>
         </methods>
-      </class> <!-- com.appiumguide.ninewaystoinstallapks.InstallapkByAppiumMethod -->
+      </class> <!-- com.appiumguide.ninewaystoinstallapks.InstallapkByUIAutomator2Command -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
