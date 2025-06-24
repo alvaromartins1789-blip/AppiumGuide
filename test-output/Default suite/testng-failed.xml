@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.appiumguide.appiumvisualTesting.GetimagesSimilarity_Demo4">
+      <class name="demo.sample3">
         <methods>
           <include name="test"/>
-          <include name="teardown"/>
           <include name="setup"/>
+          <include name="teardown"/>
         </methods>
-      </class> <!-- com.appiumguide.appiumvisualTesting.GetimagesSimilarity_Demo4 -->
+      </class> <!-- demo.sample3 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

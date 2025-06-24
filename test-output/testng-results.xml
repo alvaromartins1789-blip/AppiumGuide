@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-23T10:38:28 IST" name="Default suite" finished-at="2025-06-23T10:38:47 IST" duration-ms="19161">
+  <suite started-at="2025-06-24T13:51:56 IST" name="Default suite" finished-at="2025-06-24T13:52:01 IST" duration-ms="5350">
     <groups>
     </groups>
-    <test started-at="2025-06-23T10:38:28 IST" name="Default test" finished-at="2025-06-23T10:38:47 IST" duration-ms="19161">
-      <class name="com.appiumguide.appiumvisualTesting.GetimagesSimilarity_Demo4">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.appiumguide.appiumvisualTesting.GetimagesSimilarity_Demo4@f1da57d]" started-at="2025-06-23T10:38:28 IST" name="setup" finished-at="2025-06-23T10:38:38 IST" duration-ms="9819" status="PASS">
+    <test started-at="2025-06-24T13:51:56 IST" name="Default test" finished-at="2025-06-24T13:52:01 IST" duration-ms="5350">
+      <class name="com.appiumguide.ninewaystoinstallapks.InstallapkByCustomScript">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.appiumguide.ninewaystoinstallapks.InstallapkByCustomScript@f1da57d]" started-at="2025-06-24T13:51:56 IST" name="setup" finished-at="2025-06-24T13:52:01 IST" duration-ms="4975" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="test()[pri:0, instance:com.appiumguide.appiumvisualTesting.GetimagesSimilarity_Demo4@f1da57d]" started-at="2025-06-23T10:38:38 IST" name="test" finished-at="2025-06-23T10:38:47 IST" duration-ms="9040" status="PASS">
+        <test-method signature="test()[pri:0, instance:com.appiumguide.ninewaystoinstallapks.InstallapkByCustomScript@f1da57d]" started-at="2025-06-24T13:52:01 IST" name="test" finished-at="2025-06-24T13:52:01 IST" duration-ms="25" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.appiumguide.appiumvisualTesting.GetimagesSimilarity_Demo4@f1da57d]" started-at="2025-06-23T10:38:47 IST" name="teardown" finished-at="2025-06-23T10:38:47 IST" duration-ms="263" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.appiumguide.ninewaystoinstallapks.InstallapkByCustomScript@f1da57d]" started-at="2025-06-24T13:52:01 IST" name="teardown" finished-at="2025-06-24T13:52:01 IST" duration-ms="312" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- com.appiumguide.appiumvisualTesting.GetimagesSimilarity_Demo4 -->
+      </class> <!-- com.appiumguide.ninewaystoinstallapks.InstallapkByCustomScript -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
