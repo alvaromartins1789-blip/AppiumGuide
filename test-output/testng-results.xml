@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-28T13:54:39 IST" name="Default suite" finished-at="2025-06-28T13:55:21 IST" duration-ms="42324">
+  <suite started-at="2025-06-28T18:17:57 IST" name="Default suite" finished-at="2025-06-28T18:18:50 IST" duration-ms="52854">
     <groups>
     </groups>
-    <test started-at="2025-06-28T13:54:39 IST" name="Default test" finished-at="2025-06-28T13:55:21 IST" duration-ms="42324">
-      <class name="com.appiumguide.startappiumserver.SampleForStartServer_Demo">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.appiumguide.startappiumserver.SampleForStartServer_Demo@26abb146]" started-at="2025-06-28T13:54:39 IST" name="setup" finished-at="2025-06-28T13:55:03 IST" duration-ms="24036" status="PASS">
+    <test started-at="2025-06-28T18:17:57 IST" name="Default test" finished-at="2025-06-28T18:18:50 IST" duration-ms="52854">
+      <class name="com.appiumguide.startappiumserver.SampleForStartServer_Demo1">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.appiumguide.startappiumserver.SampleForStartServer_Demo1@26abb146]" started-at="2025-06-28T18:17:57 IST" name="setup" finished-at="2025-06-28T18:18:28 IST" duration-ms="31375" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="sampledemo()[pri:0, instance:com.appiumguide.startappiumserver.SampleForStartServer_Demo@26abb146]" started-at="2025-06-28T13:55:03 IST" name="sampledemo" finished-at="2025-06-28T13:55:21 IST" duration-ms="17873" status="PASS">
+        <test-method signature="sampledemo()[pri:0, instance:com.appiumguide.startappiumserver.SampleForStartServer_Demo1@26abb146]" started-at="2025-06-28T18:18:28 IST" name="sampledemo" finished-at="2025-06-28T18:18:49 IST" duration-ms="20830" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sampledemo -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.appiumguide.startappiumserver.SampleForStartServer_Demo@26abb146]" started-at="2025-06-28T13:55:21 IST" name="teardown" finished-at="2025-06-28T13:55:21 IST" duration-ms="368" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.appiumguide.startappiumserver.SampleForStartServer_Demo1@26abb146]" started-at="2025-06-28T18:18:49 IST" name="teardown" finished-at="2025-06-28T18:18:50 IST" duration-ms="595" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- com.appiumguide.startappiumserver.SampleForStartServer_Demo -->
+      </class> <!-- com.appiumguide.startappiumserver.SampleForStartServer_Demo1 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
