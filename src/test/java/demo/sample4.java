@@ -33,7 +33,7 @@ public class sample4 {
 		UiAutomator2Options cap=new UiAutomator2Options();
 		cap.setPlatformName("android");
 		cap.setAutomationName("uiautomator2");
-		cap.setDeviceName("Pixel6");		
+		//cap.setDeviceName("Pixel6");		
 					
 		
 		try {

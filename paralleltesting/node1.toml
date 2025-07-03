@@ -1,0 +1,14 @@
+[server]
+port = 4444
+
+[node]
+detect-drivers = false
+
+[relay]
+url = "http://localhost:4723/wd/hub"
+status-endpoint = "/status"
+#se
+configs = [
+"1", "{\"browserName\": \"chrome\", \"platformName\": \"android\",\"appium:udid\": \"emulator-5554\",\"appium:platformVersion\": \"13\"}",
+"1", "{\"browserName\": \"chrome\", \"platformName\": \"android\",\"appium:udid\": \"emulator-5556\",\"appium:platformVersion\": \"16\"}"
+]

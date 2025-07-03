@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Dec 25 12:38:58 IST 2024</td>
+<td>Started on:</td><td>Tue Jul 01 18:58:34 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>30 seconds (30024 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (21 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,24 +76,46 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='demo3.SwitchAppsTest.steup()'><b>steup</b><br>Test class: demo3.SwitchAppsTest</td>
-<td><div><pre>org.openqa.selenium.InvalidArgumentException: The server URL &apos;http://127.0.0.1:4723&apos; must include /session/&lt;id&gt; suffix
+<td title='paralleltesting.Test5.stepup1()'><b>stepup1</b><br>Test class: paralleltesting.Test5</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 404. Message: The requested resource could not be found, or a request was received using an HTTP method that is not supported by the mapped resource 
+Host info: host: &apos;DESKTOP-OGFK6VP&apos;, ip: &apos;192.168.0.104&apos;
 Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.2&apos;
-Driver info: driver.version: AndroidDriver
-	at io.appium.java_client.internal.SessionHelpers.parseSessionAddress(SessionHelpers.java:51)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:163)
-	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:246)
-	at demo3.SwitchAppsTest.steup(SwitchAppsTest.java:44)
-... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1960253514", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1960253514'><pre>org.openqa.selenium.InvalidArgumentException: The server URL &apos;http://127.0.0.1:4723&apos; must include /session/&lt;id&gt; suffix
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:automationName: uiautomator2, appium:deviceName: emulator-5556, platformName: ANDROID}]}]
+Capabilities {appium:automationName: uiautomator2, appium:deviceName: emulator-5556, platformName: ANDROID}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:178)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:243)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:313)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:174)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:101)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:113)
+	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
+	at paralleltesting.Test5.stepup1(Test5.java:36)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace936219350", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace936219350'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 404. Message: The requested resource could not be found, or a request was received using an HTTP method that is not supported by the mapped resource 
+Host info: host: &apos;DESKTOP-OGFK6VP&apos;, ip: &apos;192.168.0.104&apos;
 Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.2&apos;
-Driver info: driver.version: AndroidDriver
-	at io.appium.java_client.internal.SessionHelpers.parseSessionAddress(SessionHelpers.java:51)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:163)
-	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:246)
-	at demo3.SwitchAppsTest.steup(SwitchAppsTest.java:44)
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:automationName: uiautomator2, appium:deviceName: emulator-5556, platformName: ANDROID}]}]
+Capabilities {appium:automationName: uiautomator2, appium:deviceName: emulator-5556, platformName: ANDROID}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:178)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:243)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:313)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:174)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:101)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:113)
+	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
+	at paralleltesting.Test5.stepup1(Test5.java:36)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -117,8 +139,8 @@ Driver info: driver.version: AndroidDriver
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>30</td>
-<td>demo3.SwitchAppsTest@1b919693</td></tr>
+<td>0</td>
+<td>paralleltesting.Test5@4dc27487</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
@@ -129,10 +151,10 @@ Driver info: driver.version: AndroidDriver
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='demo3.SwitchAppsTest.teardown()'><b>teardown</b><br>Test class: demo3.SwitchAppsTest</td>
+<td title='paralleltesting.Test5.teardown1()'><b>teardown1</b><br>Test class: paralleltesting.Test5</td>
 <td></td>
 <td>0</td>
-<td>demo3.SwitchAppsTest@1b919693</td></tr>
+<td>paralleltesting.Test5@4dc27487</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -143,24 +165,46 @@ Driver info: driver.version: AndroidDriver
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='demo3.SwitchAppsTest.switchappexample()'><b>switchappexample</b><br>Test class: demo3.SwitchAppsTest</td>
-<td><div><pre>org.openqa.selenium.InvalidArgumentException: The server URL &apos;http://127.0.0.1:4723&apos; must include /session/&lt;id&gt; suffix
+<td title='paralleltesting.Test5.sessionidsample()'><b>sessionidsample</b><br>Test class: paralleltesting.Test5</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 404. Message: The requested resource could not be found, or a request was received using an HTTP method that is not supported by the mapped resource 
+Host info: host: &apos;DESKTOP-OGFK6VP&apos;, ip: &apos;192.168.0.104&apos;
 Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.2&apos;
-Driver info: driver.version: AndroidDriver
-	at io.appium.java_client.internal.SessionHelpers.parseSessionAddress(SessionHelpers.java:51)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:163)
-	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:246)
-	at demo3.SwitchAppsTest.steup(SwitchAppsTest.java:44)
-... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1969347346", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1969347346'><pre>org.openqa.selenium.InvalidArgumentException: The server URL &apos;http://127.0.0.1:4723&apos; must include /session/&lt;id&gt; suffix
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:automationName: uiautomator2, appium:deviceName: emulator-5556, platformName: ANDROID}]}]
+Capabilities {appium:automationName: uiautomator2, appium:deviceName: emulator-5556, platformName: ANDROID}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:178)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:243)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:313)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:174)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:101)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:113)
+	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
+	at paralleltesting.Test5.stepup1(Test5.java:36)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace939254952", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace939254952'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 404. Message: The requested resource could not be found, or a request was received using an HTTP method that is not supported by the mapped resource 
+Host info: host: &apos;DESKTOP-OGFK6VP&apos;, ip: &apos;192.168.0.104&apos;
 Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.2&apos;
-Driver info: driver.version: AndroidDriver
-	at io.appium.java_client.internal.SessionHelpers.parseSessionAddress(SessionHelpers.java:51)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:163)
-	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:246)
-	at demo3.SwitchAppsTest.steup(SwitchAppsTest.java:44)
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:automationName: uiautomator2, appium:deviceName: emulator-5556, platformName: ANDROID}]}]
+Capabilities {appium:automationName: uiautomator2, appium:deviceName: emulator-5556, platformName: ANDROID}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:178)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:243)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:313)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:174)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:101)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:113)
+	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
+	at paralleltesting.Test5.stepup1(Test5.java:36)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -185,7 +229,7 @@ Driver info: driver.version: AndroidDriver
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
 <td>0</td>
-<td>demo3.SwitchAppsTest@1b919693</td></tr>
+<td>paralleltesting.Test5@4dc27487</td></tr>
 </table><p>
 </body>
 </html>

@@ -1,0 +1,16 @@
+#for server configuration
+[server]
+port = 4444
+#for node configuration
+[node]
+detect-drivers = false
+#for relay node configuration
+[relay]
+url = "http://localhost:4723/wd/hub"
+status-endpoint = "/status"
+#Stereotypes supported by the service
+configs = [
+"1", "{\"browserName\": \"chrome\", \"platformName\": \"android\", \"appium:udid\": \"emulator-5554\", \"appium:platformversion\": \"13\"}",
+"1", "{\"browserName\": \"chrome\", \"platformName\": \"android\", \"appium:udid\": \"emulator-5556\", \"appium:platformversion\": \"16\"}"
+
+]

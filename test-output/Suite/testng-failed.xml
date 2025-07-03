@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Second Test(failed)">
+<suite parallel="classes" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="classes" name="Test(failed)">
     <classes>
-      <class name="demo3.SwitchAppsTest">
+      <class name="paralleltesting.SampleTest1">
         <methods>
-          <include name="steup"/>
-          <include name="switchappexample"/>
+          <include name="setup2"/>
+          <include name="teardown2"/>
+          <include name="test1"/>
+        </methods>
+      </class> <!-- paralleltesting.SampleTest1 -->
+      <class name="paralleltesting.SampleTest2">
+        <methods>
           <include name="teardown"/>
         </methods>
-      </class> <!-- demo3.SwitchAppsTest -->
+      </class> <!-- paralleltesting.SampleTest2 -->
     </classes>
-  </test> <!-- Second Test(failed) -->
+  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
