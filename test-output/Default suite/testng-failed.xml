@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="paralleltesting.SampleTest2">
+      <class name="com.appiumguide.capabilities.SessionCapabilitiesDemo">
         <methods>
           <include name="test"/>
           <include name="setup"/>
           <include name="teardown"/>
         </methods>
-      </class> <!-- paralleltesting.SampleTest2 -->
+      </class> <!-- com.appiumguide.capabilities.SessionCapabilitiesDemo -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
