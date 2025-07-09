@@ -22,14 +22,11 @@ public class Sample {
 	public void setup() throws MalformedURLException {
 		
 		UiAutomator2Options cap=new UiAutomator2Options();
-		cap.setPlatformName("android");
-		cap.setAutomationName("uiautomator2");
-		cap.setDeviceName("Pixel9");	
+		cap.setDeviceName("Pixel6");
+		cap.setNewCommandTimeout(Duration.ofSeconds(100));
 		
-		//Install apk by using desired capability
-		String basepath=System.getProperty("user.dir")+"/APK_Files/";
-		String apkpath=basepath+"ApiDemos.apk";
-		cap.setApp(apkpath);
+		
+		
 					
 		driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), cap);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(100));
@@ -39,7 +36,7 @@ public class Sample {
 	@Test
 	public void test() throws InterruptedException, IOException {
 		
-		
+		System.out.println(driver.getSessionId());
 		        
 	}
 	

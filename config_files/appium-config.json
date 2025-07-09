@@ -1,0 +1,34 @@
+{
+"server":{
+    "address": "127.0.0.1",
+    "allow-cors": true,
+    "allow-insecure":["execute-driver"],
+    "base-path": "/",
+    "callback-address": "127.0.0.1",
+    "callback-port": 4723,
+    "default-capabilities": {
+        "automationName": "uiautomator2",
+        "platformName": "android",
+        "appium:noReset": true,
+        "appium:newCommandTimeout": 50
+    },
+    "deny-insecure": ["adb_shell"],
+    "local-timezone": true,
+    "log": "/tmp/appium.log",
+    "log-level": "info",
+    "log-no-colors": false,
+    "log-timestamp": true,
+    "driver":{
+        "uiautomator2":{
+            "version": "4.2.5"
+        }
+    },
+    "plugin":{
+        "images":{
+            "active": true
+        }
+    }
+    }
+
+}
+

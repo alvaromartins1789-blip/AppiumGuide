@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.appiumguide.capabilities.NoresetVsFullreset">
+      <class name="demo.Sample">
         <methods>
           <include name="test"/>
-          <include name="teardown"/>
           <include name="setup"/>
+          <include name="teardown"/>
         </methods>
-      </class> <!-- com.appiumguide.capabilities.NoresetVsFullreset -->
+      </class> <!-- demo.Sample -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
