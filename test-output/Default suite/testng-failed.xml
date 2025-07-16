@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="demo.Sample">
+      <class name="com.appiumguide.appium3.adb_shellAppium3Demo">
         <methods>
-          <include name="test"/>
           <include name="setup"/>
           <include name="teardown"/>
+          <include name="test"/>
         </methods>
-      </class> <!-- demo.Sample -->
+      </class> <!-- com.appiumguide.appium3.adb_shellAppium3Demo -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

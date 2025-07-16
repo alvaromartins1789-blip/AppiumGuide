@@ -22,6 +22,8 @@ public class Sample {
 	public void setup() throws MalformedURLException {
 		
 		UiAutomator2Options cap=new UiAutomator2Options();
+		cap.setPlatformName("android");
+		cap.setAutomationName("uiautomator2");
 		cap.setDeviceName("Pixel6");
 		cap.setNewCommandTimeout(Duration.ofSeconds(100));
 		
@@ -46,7 +48,7 @@ public class Sample {
 	public void teardown() {
 		
 		if(driver!=null) {
-			driver.quit();
+			//driver.quit();
 			System.out.println("Test Completed");
 		}
 		
