@@ -1,0 +1,39 @@
+{
+"server":{
+    "address": "127.0.0.1",
+    "allow-cors": true,
+    "allow-insecure":["execute-driver"],
+    "base-path": "/",
+    "callback-address": "127.0.0.1",
+    "callback-port": 4723,
+    "default-capabilities": {
+        "platformName": "android",
+        "appium:options": {
+        "automationName": "uiautomator2",
+        "deviceName": "emulator-5554",
+        "platformVersion": "11.0",
+        "app": "/path/to/app.apk",
+        "noReset": true
+  }
+
+    },
+    "deny-insecure": ["adb_shell"],
+    "local-timezone": true,
+    "log": "/tmp/appium.log",
+    "log-level": "info",
+    "log-no-colors": false,
+    "log-timestamp": true,
+    "driver":{
+        "uiautomator2":{
+            "version": "4.2.5"
+        }
+    },
+    "plugin":{
+        "images":{
+            "active": true
+        }
+    }
+    }
+
+}
+
