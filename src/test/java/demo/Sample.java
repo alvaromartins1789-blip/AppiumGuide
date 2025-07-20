@@ -5,6 +5,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import java.io.File;
@@ -20,49 +21,46 @@ public class Sample {
 	
 								
 	@BeforeTest
-	public void setup() throws MalformedURLException {
-		
-		 
-        String basepath=System.getProperty("user.dir")+"/APK_Files/";
-		String apkpath=basepath+"ApiDemos.apk";
-		
-		Map<String,Object> appiumoptions=new HashMap<>();
-		
-		appiumoptions.put("platformVersion", "13");
-		appiumoptions.put("automationName", "uiautomator2");
-        appiumoptions.put("deviceName", "Pixel6");
-       	appiumoptions.put("app", apkpath);
-        appiumoptions.put("noReset", true);
-        appiumoptions.put("autoGrantPermissions", true);
-        appiumoptions.put("newCommandTimeout", 120);
-		
+	public void setup2() throws MalformedURLException {
 		UiAutomator2Options cap=new UiAutomator2Options();
 		cap.setPlatformName("android");
-		cap.setCapability("appium:options", appiumoptions);
+		cap.setAutomationName("uiautomator2");
+		cap.setUdid("emulator-5554");
+		cap.setApp("file-1752938632033.apk");
 		
-		
-		
-					
-		driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), cap);
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(100));
-		
+							
+		driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), cap);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
 	
 	@Test
-	public void test() throws InterruptedException, IOException {
+	public void test1() throws InterruptedException {
 		
-		System.out.println(driver.getSessionId());
-		        
+		driver.activateApp("io.appium.android.apis");
+		driver.findElement(AppiumBy.accessibilityId("Views")).click();
+		driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector().scrollable(true))"+
+				".scrollIntoView(new UiSelector().text(\"Tabs\"))"));
+		driver.findElement(AppiumBy.accessibilityId("Tabs")).click();
+		driver.findElement(AppiumBy.accessibilityId("5. Scrollable")).click();
+		driver.findElement(AppiumBy.androidUIAutomator(
+		        "new UiScrollable(new UiSelector().scrollable(true)).setAsHorizontalList().setMaxSearchSwipes(10)" +
+		         ".scrollIntoView(new UiSelector().text(\"TAB 30\"))"));
+		Thread.sleep(5000);
+		driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().text(\"TAB 30\")")).click();
+		driver.findElement(AppiumBy.androidUIAutomator(
+		        "new UiScrollable(new UiSelector().scrollable(true)).setAsHorizontalList().setMaxSearchSwipes(10)" +
+		         ".scrollIntoView(new UiSelector().text(\"TAB 1\"))"));
+		Thread.sleep(5000);
+		driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().text(\"TAB 1\")")).click();
+				
 	}
 	
-				
-		
 	@AfterTest
-	public void teardown() {
+	public void teardown2() {
 		
 		if(driver!=null) {
 			//driver.quit();
-			System.out.println("Test Completed");
+			System.out.println("Test Execution Completed");
 		}
 		
 	}

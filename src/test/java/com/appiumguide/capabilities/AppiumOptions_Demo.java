@@ -29,12 +29,10 @@ public class AppiumOptions_Demo {
 	@BeforeTest
 	public void setup() throws MalformedURLException {
 		
-		//Install apk by using desired capability
 		String basepath=System.getProperty("user.dir")+"/APK_Files/";
 		String apkpath=basepath+"ApiDemos.apk";
 		
-		
-		//appium:options container
+		//Step 1: Create a map for appium:options
 		Map<String,Object> appiumOptions=new HashMap<>();
 		
 		appiumOptions.put("platformVersion", "13");
@@ -49,6 +47,7 @@ public class AppiumOptions_Demo {
 		//PlatformName at root-level
 		cap.setPlatformName("android");
 		
+		//Step 2: Wrap appium options inside Capabilities
 		cap.setCapability("appium:options", appiumOptions);	
 		
 		
