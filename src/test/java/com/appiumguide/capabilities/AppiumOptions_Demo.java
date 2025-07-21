@@ -59,7 +59,7 @@ public class AppiumOptions_Demo {
 	@Test
 	public void test() throws InterruptedException, IOException {
 		
-		
+		System.out.println(driver.getSessionId());
 		        
 	}
 	

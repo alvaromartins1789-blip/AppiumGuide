@@ -26,7 +26,7 @@ public class Sample {
 		cap.setPlatformName("android");
 		cap.setAutomationName("uiautomator2");
 		cap.setUdid("emulator-5554");
-		cap.setApp("file-1752938632033.apk");
+		//cap.setApp("file-1752938632033.apk");
 		
 							
 		driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), cap);

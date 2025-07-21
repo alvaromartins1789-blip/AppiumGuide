@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-19T20:56:19 IST" name="Default suite" finished-at="2025-07-19T20:57:43 IST" duration-ms="84441">
+  <suite started-at="2025-07-21T01:10:12 IST" name="Default suite" finished-at="2025-07-21T01:12:10 IST" duration-ms="118391">
     <groups>
     </groups>
-    <test started-at="2025-07-19T20:56:19 IST" name="Default test" finished-at="2025-07-19T20:57:43 IST" duration-ms="84441">
+    <test started-at="2025-07-21T01:10:12 IST" name="Default test" finished-at="2025-07-21T01:12:10 IST" duration-ms="118391">
       <class name="demo.Sample">
-        <test-method is-config="true" signature="setup2()[pri:0, instance:demo.Sample@480d3575]" started-at="2025-07-19T20:56:19 IST" name="setup2" finished-at="2025-07-19T20:56:36 IST" duration-ms="17146" status="PASS">
+        <test-method is-config="true" signature="setup2()[pri:0, instance:demo.Sample@5745ca0e]" started-at="2025-07-21T01:10:12 IST" name="setup2" finished-at="2025-07-21T01:10:54 IST" duration-ms="41684" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup2 -->
-        <test-method signature="test1()[pri:0, instance:demo.Sample@480d3575]" started-at="2025-07-19T20:56:36 IST" name="test1" finished-at="2025-07-19T20:57:43 IST" duration-ms="67252" status="PASS">
+        <test-method signature="test1()[pri:0, instance:demo.Sample@5745ca0e]" started-at="2025-07-21T01:10:54 IST" name="test1" finished-at="2025-07-21T01:12:10 IST" duration-ms="76643" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test1 -->
-        <test-method is-config="true" signature="teardown2()[pri:0, instance:demo.Sample@480d3575]" started-at="2025-07-19T20:57:43 IST" name="teardown2" finished-at="2025-07-19T20:57:43 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="teardown2()[pri:0, instance:demo.Sample@5745ca0e]" started-at="2025-07-21T01:12:10 IST" name="teardown2" finished-at="2025-07-21T01:12:10 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown2 -->
