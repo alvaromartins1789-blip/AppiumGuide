@@ -1,6 +1,7 @@
 
 package demo;
 
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -15,6 +16,13 @@ import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.openqa.selenium.remote.Command;
+import org.openqa.selenium.remote.CommandExecutor;
+import org.openqa.selenium.remote.CommandInfo;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.HttpCommandExecutor;
+import org.openqa.selenium.remote.Response;
+
 public class Sample {
 	
 	private AndroidDriver driver;
@@ -26,34 +34,35 @@ public class Sample {
 		cap.setPlatformName("android");
 		cap.setAutomationName("uiautomator2");
 		cap.setUdid("emulator-5554");
-		//cap.setApp("file-1752938632033.apk");
-		
-							
-		driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), cap);
+		//cap.amend("appium:plugin","ocr");
+		cap.skipDeviceInitialization();
+		cap.skipServerInstallation();
+		cap.setAppPackage(null);
+		cap.setAppActivity(null);
+									
+		driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), cap);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
 	
 	@Test
-	public void test1() throws InterruptedException {
+	public void test1() throws InterruptedException, IOException {
+		driver.context("OCR");
 		
-		driver.activateApp("io.appium.android.apis");
-		driver.findElement(AppiumBy.accessibilityId("Views")).click();
-		driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector().scrollable(true))"+
-				".scrollIntoView(new UiSelector().text(\"Tabs\"))"));
-		driver.findElement(AppiumBy.accessibilityId("Tabs")).click();
-		driver.findElement(AppiumBy.accessibilityId("5. Scrollable")).click();
-		driver.findElement(AppiumBy.androidUIAutomator(
-		        "new UiScrollable(new UiSelector().scrollable(true)).setAsHorizontalList().setMaxSearchSwipes(10)" +
-		         ".scrollIntoView(new UiSelector().text(\"TAB 30\"))"));
-		Thread.sleep(5000);
-		driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().text(\"TAB 30\")")).click();
-		driver.findElement(AppiumBy.androidUIAutomator(
-		        "new UiScrollable(new UiSelector().scrollable(true)).setAsHorizontalList().setMaxSearchSwipes(10)" +
-		         ".scrollIntoView(new UiSelector().text(\"TAB 1\"))"));
-		Thread.sleep(5000);
-		driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().text(\"TAB 1\")")).click();
+
+		// Find the element with OCR text 'Invalid email address'
+		WebElement invalidEmailMessage = driver.findElement(AppiumBy.xpath("//android.widget.ScrollView[@content-desc=\"Home-screen\"]/android.view.ViewGroup/android.widget.ImageView[1]"));
+
+		// Check if the element is displayed
+		if (invalidEmailMessage.isDisplayed()) {
+		    System.out.println("Successfully validated that the error message is displayed");
+		} else {
+		    System.out.println("The error message is not present");
+		}
+		 
+    }
 				
-	}
+				
+	
 	
 	@AfterTest
 	public void teardown2() {
