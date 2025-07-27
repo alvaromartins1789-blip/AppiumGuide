@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="demo.devicefarm_firstscriptdemo">
+      <class name="com.appiumguide.devicefarm.devicefarm_VideoRecordingDemo">
         <methods>
-          <include name="test1"/>
           <include name="teardown"/>
+          <include name="test1"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- demo.devicefarm_firstscriptdemo -->
+      </class> <!-- com.appiumguide.devicefarm.devicefarm_VideoRecordingDemo -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

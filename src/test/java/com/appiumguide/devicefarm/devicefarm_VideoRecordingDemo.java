@@ -1,0 +1,133 @@
+package com.appiumguide.devicefarm;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebElement;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+import com.google.common.collect.ImmutableMap;
+import io.appium.java_client.AppiumBy;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.options.UiAutomator2Options;
+import java.net.*;
+import java.time.Duration;
+
+/**
+ * Script Details - "appium-device-farm”- Complete Details on Enable/Disable “live video Streaming” for the Session Under “Appium Device Farm”
+ * 
+ * appium-java-client version: 9.5.0
+ * 
+ * @author 'Ramesh Kodumuru' for AppiumGuide [appiumguide@gmail.com]
+ */
+
+public class devicefarm_VideoRecordingDemo {
+	
+	private AndroidDriver driver;
+	
+	WebElement dragelement,dropelement;
+		
+	@BeforeClass
+	public void setup() throws MalformedURLException {
+		UiAutomator2Options cap=new UiAutomator2Options();
+		cap.setPlatformName("android");
+		cap.setAutomationName("uiautomator2");
+		cap.setDeviceName("Pixel9");
+		
+		// To enable & disable video recording under appium-device-farm
+		
+		//cap.setCapability("df:recordVideo", false);  //To disable video recording   ///Default is disabled i.e false
+		
+		cap.setCapability("df:recordVideo", true); 	 //To enable video recording
+		
+		// To set video recording time limit
+		
+		cap.setCapability("df:videoTimeLimit", "2400");  //To specify the video time limit to 4 minutes   //Default Video Time Limit is 1800 seconds (3 Mins)
+		
+					
+		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));		
+	}
+	
+	@Test
+	public void test1() throws InterruptedException {
+		
+		driver.activateApp("com.wdiodemoapp");
+		
+		Thread.sleep(5000);
+		
+		driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().text(\"Drag\")")).click();
+		
+		
+		
+		dragelement=driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().className(\"android.widget.ImageView\").instance(4)"));
+		
+		dropelement=driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().className(\"android.view.ViewGroup\").instance(10)"));
+		
+		int eX=(int)(dropelement.getRect().getX());
+		int eY=(int)(dropelement.getRect().getY());
+		
+		//Perform Drag gesture based on element id, endX & endY co-ordinates
+		System.out.println("Perform Drag gesture based on element id, endX & endY co-ordinates");
+		((JavascriptExecutor) driver).executeScript("mobile: dragGesture",ImmutableMap.of("elementId",((RemoteWebElement) dragelement).getId(),
+				"endX",eX,
+				"endY",eY));
+		
+		Thread.sleep(3000);
+		dragelement=driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().className(\"android.widget.ImageView\").instance(7)"));
+		
+		int sX=(int)(dragelement.getRect().getX());
+		int sY=(int)(dragelement.getRect().getY());
+		
+		dropelement=driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().className(\"android.view.ViewGroup\").instance(8)"));
+		
+		int eX1=(int)(dropelement.getRect().getX());
+		int eY1=(int)(dropelement.getRect().getY());
+		
+		//Perform Drag gesture based on element id, startX,startY,endX & endY co-ordinates	
+		System.out.println("Perform Drag gesture based on element id, startX,startY,endX & endY co-ordinates");
+		
+		((JavascriptExecutor) driver).executeScript("mobile: dragGesture",ImmutableMap.of(
+				"startX",sX,
+				"startY",sY,
+				"endX",eX1,
+				"endY",eY1));
+		
+		Thread.sleep(3000);
+		
+		////Perform Drag gesture based on element id,endX,endY co-ordinates and Speed
+		
+		dragelement=driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().className(\"android.widget.ImageView\").instance(1)"));
+		
+		dropelement=driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().className(\"android.view.ViewGroup\").instance(10)"));
+		
+		int eX2=(int)(dropelement.getRect().getX());
+		int eY2=(int)(dropelement.getRect().getY());
+		
+		int speedvalue=(int)(100*2.625);
+		System.out.println("Perform Drag gesture based on element id,endX,endY co-ordinates and Speed");
+		
+		((JavascriptExecutor) driver).executeScript("mobile: dragGesture",ImmutableMap.of("elementId",((RemoteWebElement) dragelement).getId(),
+				"endX",eX2,
+				"endY",eY2,
+				"speed",speedvalue));
+		
+		Thread.sleep(3000);
+		
+	}		
+		
+	@AfterClass
+	public void teardown() {
+		
+		if(driver!=null) {
+			driver.quit();
+			System.out.println("Test Execution Completed");
+
+		}
+		
+	}
+	
+
+}
+
+
