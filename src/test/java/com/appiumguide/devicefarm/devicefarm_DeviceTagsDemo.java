@@ -1,27 +1,25 @@
 package com.appiumguide.devicefarm;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.RemoteWebElement;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import com.google.common.collect.ImmutableMap;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import java.net.*;
 import java.time.Duration;
+import java.util.Arrays;
 
 /**
- * Script Details - "appium-device-farm”- Complete Details on Enable/Disable “live video Streaming” for the Session Under “Appium Device Farm”
+ * Script Details - "appium-device-farm”- Step-by-Step Details: How to Create & Configure “Tags” in  “Appium Device Farm”
  * 
  * appium-java-client version: 9.5.0
  * 
  * @author 'Ramesh Kodumuru' for AppiumGuide [appiumguide@gmail.com]
  */
 
-public class devicefarm_VideoRecordingDemo {
+public class devicefarm_DeviceTagsDemo {
 	
 	private AndroidDriver driver;
 	
@@ -32,18 +30,15 @@ public class devicefarm_VideoRecordingDemo {
 		UiAutomator2Options cap=new UiAutomator2Options();
 		cap.setPlatformName("android");
 		cap.setAutomationName("uiautomator2");
-		cap.setDeviceName("Pixel9");
+				
+		// Specify the Tags as Capabilities - for Test-1
 		
-		// To enable & disable video recording under appium-device-farm
+		//cap.setCapability("df:tags", Arrays.asList("TeamB","WDIOApp","AndroidEmulator")); //Pass the values as array
 		
-		//cap.setCapability("df:recordVideo", false);  //To disable video recording   ///Default is disabled i.e false
 		
-		cap.setCapability("df:recordVideo", true); 	 //To enable video recording
+		// Specify the Tags as Capabilities - for Test-2
 		
-							
-		// To set video recording time limit
-		
-		cap.setCapability("df:videoTimeLimit", "2400");  //To specify the video time limit to 4 minutes   //Default Video Time Limit is 1800 seconds (3 Mins)
+		cap.setCapability("df:tags", Arrays.asList("TeamA","ApiDemosApp","RealDevice")); //Pass the values as array
 		
 					
 		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
@@ -53,6 +48,10 @@ public class devicefarm_VideoRecordingDemo {
 	@Test
 	public void test1() throws InterruptedException {
 		
+		
+		// Code for Test- 1 (cap.setCapability("df:tags", Arrays.asList("TeamB","WDIOApp","AndroidEmulator"));)
+		
+		/*
 		driver.activateApp("com.wdiodemoapp");
 		
 		Thread.sleep(5000);
@@ -114,6 +113,39 @@ public class devicefarm_VideoRecordingDemo {
 				"speed",speedvalue));
 		
 		Thread.sleep(3000);
+		*/
+		
+		
+		//code for Test-2 - (cap.setCapability("df:tags", Arrays.asList("TeamA","ApiDemosApp","RealDevice"));
+		
+		driver.activateApp("io.appium.android.apis");
+		
+		
+		driver.findElement(AppiumBy.accessibilityId("Views")).click();
+		
+		driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector().scrollable(true))"+
+				".scrollIntoView(new UiSelector().text(\"Tabs\"))"));
+		
+		
+		driver.findElement(AppiumBy.accessibilityId("Tabs")).click();
+		
+		driver.findElement(AppiumBy.accessibilityId("5. Scrollable")).click();
+		
+		driver.findElement(AppiumBy.androidUIAutomator(
+		        "new UiScrollable(new UiSelector().scrollable(true)).setAsHorizontalList().setMaxSearchSwipes(10)" +
+		         ".scrollIntoView(new UiSelector().text(\"TAB 30\"))"));
+						
+		Thread.sleep(5000);
+		
+		driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().text(\"TAB 30\")")).click();
+		
+		driver.findElement(AppiumBy.androidUIAutomator(
+		        "new UiScrollable(new UiSelector().scrollable(true)).setAsHorizontalList().setMaxSearchSwipes(10)" +
+		         ".scrollIntoView(new UiSelector().text(\"TAB 1\"))"));
+		Thread.sleep(5000);
+		
+		driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().text(\"TAB 1\")")).click();	
+		
 		
 	}		
 		
