@@ -34,6 +34,8 @@ public class devicefarm_FirstScriptOnRealDeviceDemo {
 		cap.setAutomationName("uiautomator2");
 		cap.setUdid("E6S8MJPFYHEUZDU8"); //UDID of Real Device
 		
+		// Aumentar tempo máximo de inatividade da sessão (em segundos)
+		cap.setCapability("newCommandTimeout", 300); // 5 minutos
 							
 		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));		
@@ -47,8 +49,6 @@ public class devicefarm_FirstScriptOnRealDeviceDemo {
 		Thread.sleep(5000);
 		
 		driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().text(\"Drag\")")).click();
-		
-		
 		
 		dragelement=driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().className(\"android.widget.ImageView\").instance(4)"));
 		
@@ -112,12 +112,6 @@ public class devicefarm_FirstScriptOnRealDeviceDemo {
 		if(driver!=null) {
 			driver.quit();
 			System.out.println("Test Execution Completed");
-
 		}
-		
 	}
-	
-
 }
-
-

@@ -34,11 +34,12 @@ public class devicefarm_BuildNameDemo {
 		cap.setAutomationName("uiautomator2");
 		cap.setDeviceName("Pixel9");
 		
-		//To allocate build name
+		// Aumentar tempo máximo de inatividade da sessão (em segundos)
+		cap.setCapability("newCommandTimeout", 300); // 5 minutos
 		
+		//To allocate build name
 		cap.setCapability("df:build","RegressionTest_V2.10");		
 		
-					
 		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));		
 	}
@@ -51,8 +52,6 @@ public class devicefarm_BuildNameDemo {
 		Thread.sleep(5000);
 		
 		driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().text(\"Drag\")")).click();
-		
-		
 		
 		dragelement=driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().className(\"android.widget.ImageView\").instance(4)"));
 		
@@ -123,5 +122,3 @@ public class devicefarm_BuildNameDemo {
 	
 
 }
-
-

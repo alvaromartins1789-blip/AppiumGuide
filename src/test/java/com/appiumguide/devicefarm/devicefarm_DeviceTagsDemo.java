@@ -30,7 +30,10 @@ public class devicefarm_DeviceTagsDemo {
 		UiAutomator2Options cap=new UiAutomator2Options();
 		cap.setPlatformName("android");
 		cap.setAutomationName("uiautomator2");
-				
+		
+		// Aumentar tempo máximo de inatividade da sessão (em segundos)
+		cap.setCapability("newCommandTimeout", 300); // 5 minutos
+					
 		// Specify the Tags as Capabilities - for Test-1
 		
 		//cap.setCapability("df:tags", Arrays.asList("TeamB","WDIOApp","AndroidEmulator")); //Pass the values as array

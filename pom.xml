@@ -4,6 +4,14 @@
   <artifactId>Appium-Guide</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- Target Java version for compilation -->
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+        <maven.compiler.release>21</maven.compiler.release>
+    </properties>
+
 
 <dependencies>
 <dependency>
@@ -107,24 +115,30 @@
 
  
   </dependencies>
-  <build>
- <plugins> 
- 
-<plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-surefire-plugin</artifactId>
-    <version>3.5.2</version>
-     <executions>
-        <execution>
-            <configuration>
-                <parallel>classes</parallel>
-       			<threadCount>5</threadCount>
-            </configuration>
-        </execution>
-    </executions>
-</plugin>
-</plugins>
-	   
-</build>
-  
+    <build>
+        <plugins>
+
+            <!-- Configure compiler plugin to use Java 21 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
+                <configuration>
+                    <release>21</release>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.5.2</version>
+                <configuration>
+                    <parallel>classes</parallel>
+                    <threadCount>5</threadCount>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+
 </project>

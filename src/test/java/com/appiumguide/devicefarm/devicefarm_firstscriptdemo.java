@@ -28,24 +28,23 @@ public class devicefarm_firstscriptdemo {
 		cap.setAutomationName("uiautomator2");
 		cap.setDeviceName("Pixel6");
 		
-		//Add basepath - /wd/hub to the URL from "http://127.0.0.1:4723" to "http://127.0.0.1:4723/wd/hub"
+		// Aumentar tempo máximo de inatividade da sessão (em segundos)
+		cap.setCapability("newCommandTimeout", 300); // 5 minutos
 		
+		//Add basepath - /wd/hub to the URL from "http://127.0.0.1:4723" to "http://127.0.0.1:4723/wd/hub"
 		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		
-			
 	}
+	
 	@Test
 	public void test1() throws InterruptedException {
 		
 		driver.activateApp("io.appium.android.apis");
 		
-		
 		driver.findElement(AppiumBy.accessibilityId("Views")).click();
 		
 		driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector().scrollable(true))"+
 				".scrollIntoView(new UiSelector().text(\"Tabs\"))"));
-		
 		
 		driver.findElement(AppiumBy.accessibilityId("Tabs")).click();
 		
@@ -65,11 +64,8 @@ public class devicefarm_firstscriptdemo {
 		Thread.sleep(5000);
 		
 		driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().text(\"TAB 1\")")).click();		
-		
 	}
 	
-			
-		
 	@AfterTest
 	public void teardown() {
 		
@@ -77,8 +73,5 @@ public class devicefarm_firstscriptdemo {
 			driver.quit();
 			System.out.println("Test Execution Completed");
 		}
-		
 	}
-	
-
 }

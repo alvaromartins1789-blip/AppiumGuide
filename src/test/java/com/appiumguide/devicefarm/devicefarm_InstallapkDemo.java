@@ -32,15 +32,16 @@ public class devicefarm_InstallapkDemo {
 		cap.setAutomationName("uiautomator2");
 		cap.setDeviceName("Pixel6");
 		
-		//Install apk by using device-farm central repo
+		// Aumentar tempo máximo de inatividade da sessão (em segundos)
+		cap.setCapability("newCommandTimeout", 300); // 5 minutos
 		
+		//Install apk by using device-farm central repo
 		cap.setApp("file-1753272517991.apk");
 		cap.autoGrantPermissions();
 		cap.noReset();
 					
 		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(100));
-		
 	}
 	
 	@Test
@@ -48,12 +49,10 @@ public class devicefarm_InstallapkDemo {
 		
 		driver.activateApp("io.appium.android.apis");
 		
-		
 		driver.findElement(AppiumBy.accessibilityId("Views")).click();
 		
 		driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector().scrollable(true))"+
 				".scrollIntoView(new UiSelector().text(\"Tabs\"))"));
-		
 		
 		driver.findElement(AppiumBy.accessibilityId("Tabs")).click();
 		
@@ -73,22 +72,13 @@ public class devicefarm_InstallapkDemo {
 		Thread.sleep(5000);
 		
 		driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().text(\"TAB 1\")")).click();	
-		        
 	}
-	
-				
 		
 	@AfterTest
 	public void teardown() {
-		
 		if(driver!=null) {
 			driver.quit();
 			System.out.println("Test Completed");
 		}
-		
 	}
-	
-
 }
-
-

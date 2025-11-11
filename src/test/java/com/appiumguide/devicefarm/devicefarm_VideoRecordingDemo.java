@@ -34,17 +34,17 @@ public class devicefarm_VideoRecordingDemo {
 		cap.setAutomationName("uiautomator2");
 		cap.setDeviceName("Pixel9");
 		
+		// Aumentar tempo máximo de inatividade da sessão (em segundos)
+		cap.setCapability("newCommandTimeout", 300); // 5 minutos
+		
 		// To enable & disable video recording under appium-device-farm
 		
 		//cap.setCapability("df:recordVideo", false);  //To disable video recording   ///Default is disabled i.e false
 		
 		cap.setCapability("df:recordVideo", true); 	 //To enable video recording
-		
 							
 		// To set video recording time limit
-		
 		cap.setCapability("df:videoTimeLimit", "2400");  //To specify the video time limit to 4 minutes   //Default Video Time Limit is 1800 seconds (3 Mins)
-		
 					
 		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));		
@@ -58,8 +58,6 @@ public class devicefarm_VideoRecordingDemo {
 		Thread.sleep(5000);
 		
 		driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().text(\"Drag\")")).click();
-		
-		
 		
 		dragelement=driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().className(\"android.widget.ImageView\").instance(4)"));
 		
@@ -123,12 +121,6 @@ public class devicefarm_VideoRecordingDemo {
 		if(driver!=null) {
 			driver.quit();
 			System.out.println("Test Execution Completed");
-
 		}
-		
 	}
-	
-
 }
-
-

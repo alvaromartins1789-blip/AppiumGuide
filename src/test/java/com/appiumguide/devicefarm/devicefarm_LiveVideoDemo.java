@@ -34,12 +34,14 @@ public class devicefarm_LiveVideoDemo {
 		cap.setAutomationName("uiautomator2");
 		cap.setDeviceName("Pixel9");
 		
+		// Aumentar tempo máximo de inatividade da sessão (em segundos)
+		cap.setCapability("newCommandTimeout", 300); // 5 minutos
+		
 		//To Enable & Disable the live video streaming in Device Farm
 		
 		//cap.setCapability("df:liveVideo", false);  //Live Video Streaming is disabled
 		
 		//cap.setCapability("df:liveVideo", true);  //Live Video Streaming is enabled    //Default value for live video Streaming is true
-		
 					
 		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));		
@@ -51,8 +53,6 @@ public class devicefarm_LiveVideoDemo {
 		driver.activateApp("com.wdiodemoapp");
 		
 		driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().text(\"Drag\")")).click();
-		
-		
 		
 		dragelement=driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().className(\"android.widget.ImageView\").instance(4)"));
 		
@@ -114,12 +114,6 @@ public class devicefarm_LiveVideoDemo {
 		if(driver!=null) {
 			driver.quit();
 			System.out.println("Test Execution Completed");
-
 		}
-		
 	}
-	
-
 }
-
-
